@@ -1,0 +1,130 @@
+    @prefix xnat: <http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors#> .
+    @prefix xnatpatient: <http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors/Patient#> .
+    
+    @prefix surgi: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/> .
+	@prefix surgiProp: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A> .
+	@prefix surgiCat: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A> .
+    
+    @prefix log: <http://www.w3.org/2000/10/swap/log#>.
+    @prefix math: <http://www.w3.org/2000/10/swap/math#>.
+    @prefix time: <http://www.w3.org/2000/10/swap/time#>.
+    @prefix string: <http://www.w3.org/2000/10/swap/string#>.
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    
+{
+ ?o1  surgiProp:hasFactor surgi:Creatinin .
+ ?o1  surgiProp:hasPatient ?p .
+ ?o1  surgiProp:hasObsValue ?cr .
+ ?o2  surgiProp:hasFactor surgi:Bilirubin .
+ ?o2  surgiProp:hasPatient ?p .
+ ?o2  surgiProp:hasObsValue ?bil .
+ ?o3  surgiProp:hasFactor surgi:INR .
+ ?o3  surgiProp:hasPatient ?p .
+ ?o3  surgiProp:hasObsValue ?inr .
+ (?cr 9.57) math:product ?s1 .
+ (?bil 3.78) math:product ?s2 .
+ (?inr 11.2) math:product ?s3 .
+ (?s1 ?s2 ?s3 6.43) math:sum ?meld .
+ ?meld math:notGreaterThan 9 
+} => {
+	_:meldObs a  surgiCat:Observation .
+	_:meldObs  surgiProp:hasFactor surgi:MELD .
+	_:meldObs  surgiProp:hasPatient ?p .
+	_:meldObs  surgiProp:hasMeldValue ?meld .
+	_:meldObs  surgiProp:hasObsValue "Mortality without transplantation: 1.9%" .
+	} .
+
+{
+ ?o1  surgiProp:hasFactor surgi:Creatinin .
+ ?o1  surgiProp:hasPatient ?p .
+ ?o1  surgiProp:hasObsValue ?cr .
+ ?o2  surgiProp:hasFactor surgi:Bilirubin .
+ ?o2  surgiProp:hasPatient ?p .
+ ?o2  surgiProp:hasObsValue ?bil .
+ ?o3  surgiProp:hasFactor surgi:INR .
+ ?o3  surgiProp:hasPatient ?p .
+ ?o3  surgiProp:hasObsValue ?inr .
+ (?cr 9.57) math:product ?s1 .
+ (?bil 3.78) math:product ?s2 .
+ (?inr 11.2) math:product ?s3 .
+ (?s1 ?s2 ?s3 6.43) math:sum ?meld .
+ ?meld math:notLessThan 10 .
+ ?meld math:notGreaterThan 19  
+} => {
+	_:meldObs a  surgiCat:Observation .
+	_:meldObs  surgiProp:hasFactor surgi:MELD .
+	_:meldObs  surgiProp:hasPatient ?p .
+	_:meldObs  surgiProp:hasMeldValue ?meld .
+	_:meldObs  surgiProp:hasObsValue "Mortality without transplantation: 6.0%" .
+	} .
+
+{
+ ?o1  surgiProp:hasFactor surgi:Creatinin .
+ ?o1  surgiProp:hasPatient ?p .
+ ?o1  surgiProp:hasObsValue ?cr .
+ ?o2  surgiProp:hasFactor surgi:Bilirubin .
+ ?o2  surgiProp:hasPatient ?p .
+ ?o2  surgiProp:hasObsValue ?bil .
+ ?o3  surgiProp:hasFactor surgi:INR .
+ ?o3  surgiProp:hasPatient ?p .
+ ?o3  surgiProp:hasObsValue ?inr .
+ (?cr 9.57) math:product ?s1 .
+ (?bil 3.78) math:product ?s2 .
+ (?inr 11.2) math:product ?s3 .
+ (?s1 ?s2 ?s3 6.43) math:sum ?meld .
+ ?meld math:notLessThan 20 .
+ ?meld math:notGreaterThan 29 
+} => {
+	_:meldObs a  surgiCat:Observation .
+	_:meldObs  surgiProp:hasFactor surgi:MELD .
+	_:meldObs  surgiProp:hasPatient ?p .
+	_:meldObs  surgiProp:hasMeldValue ?meld .
+	_:meldObs  surgiProp:hasObsValue "Mortality without transplantation: 19.6%" .
+	} .
+
+{
+ ?o1  surgiProp:hasFactor surgi:Creatinin .
+ ?o1  surgiProp:hasPatient ?p .
+ ?o1  surgiProp:hasObsValue ?cr .
+ ?o2  surgiProp:hasFactor surgi:Bilirubin .
+ ?o2  surgiProp:hasPatient ?p .
+ ?o2  surgiProp:hasObsValue ?bil .
+ ?o3  surgiProp:hasFactor surgi:INR .
+ ?o3  surgiProp:hasPatient ?p .
+ ?o3  surgiProp:hasObsValue ?inr .
+ (?cr 9.57) math:product ?s1 .
+ (?bil 3.78) math:product ?s2 .
+ (?inr 11.2) math:product ?s3 .
+ (?s1 ?s2 ?s3 6.43) math:sum ?meld .
+ ?meld math:notLessThan 30 .
+ ?meld math:notGreaterThan 39 
+} => {
+	_:meldObs a  surgiCat:Observation .
+	_:meldObs  surgiProp:hasFactor surgi:MELD .
+	_:meldObs  surgiProp:hasPatient ?p .
+	_:meldObs  surgiProp:hasMeldValue ?meld .
+	_:meldObs  surgiProp:hasObsValue "Mortality without transplantation: 52.6%" .
+	} .
+
+{
+ ?o1  surgiProp:hasFactor surgi:Creatinin .
+ ?o1  surgiProp:hasPatient ?p .
+ ?o1  surgiProp:hasObsValue ?cr .
+ ?o2  surgiProp:hasFactor surgi:Bilirubin .
+ ?o2  surgiProp:hasPatient ?p .
+ ?o2  surgiProp:hasObsValue ?bil .
+ ?o3  surgiProp:hasFactor surgi:INR .
+ ?o3  surgiProp:hasPatient ?p .
+ ?o3  surgiProp:hasObsValue ?inr .
+ (?cr 9.57) math:product ?s1 .
+ (?bil 3.78) math:product ?s2 .
+ (?inr 11.2) math:product ?s3 .
+ (?s1 ?s2 ?s3 6.43) math:sum ?meld .
+ ?meld math:notLessThan 40 
+} => {
+	_:meldObs a  surgiCat:Observation .
+	_:meldObs  surgiProp:hasFactor surgi:MELD .
+	_:meldObs  surgiProp:hasPatient ?p .
+	_:meldObs  surgiProp:hasMeldValue ?meld .
+	_:meldObs  surgiProp:hasObsValue "Mortality without transplantation: 71.3%" .
+	} .

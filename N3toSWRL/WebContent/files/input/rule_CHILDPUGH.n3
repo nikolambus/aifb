@@ -1,0 +1,234 @@
+    @prefix xnat: <http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors#> .
+    @prefix xnatpatient: <http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors/Patient#> .
+    
+    @prefix surgi: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/> .
+	@prefix surgiProp: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A> .
+	@prefix surgiCat: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A> .
+    
+    @prefix math: <http://www.w3.org/2000/10/swap/math#>.
+    @prefix time: <http://www.w3.org/2000/10/swap/time#>.
+    @prefix log: <http://www.w3.org/2000/10/swap/log#>.
+    @prefix string: <http://www.w3.org/2000/10/swap/string#>.
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Albumin .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue ?alb .
+ ?alb math:greaterThan 3.5 .
+} => { 
+	surgi:scoresHelpNode a log:Chaff .
+	surgi:scoresHelpNode surgiProp:has_score_albumin 1 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Albumin .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue ?alb .
+ ?alb math:notGreaterThan 3.5 .
+ ?alb math:notLessThan 2.8 .
+} => { 
+	surgi:scoresHelpNode a log:Chaff .
+	surgi:scoresHelpNode surgiProp:has_score_albumin 2 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .	
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Albumin .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue ?alb .
+ ?alb math:lessThan 2.8 .
+} => { 
+	surgi:scoresHelpNode a log:Chaff .
+	surgi:scoresHelpNode surgiProp:has_score_albumin 3 .	
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Bilirubin .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue ?bil .
+ ?bil math:lessThan 2.0 
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_bilirubin 1 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Bilirubin .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue ?bil .
+ ?bil math:notLessThan 2.0 .
+ ?bil math:notGreaterThan 3.0 
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_bilirubin 2 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Bilirubin .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue ?bil .
+ ?bil math:greaterThan 3.0 
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_bilirubin 3 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:INR .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue ?inr .
+ ?inr math:lessThan 1.7 
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_inr 1 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:INR .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue ?inr .
+ ?inr math:notLessThan 1.7 .
+ ?inr math:notGreaterThan 2.2 
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_inr 2 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:INR .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue ?inr .
+ ?inr math:greaterThan 2.2 
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_inr 3 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Ascites .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue "no" .
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_ascites 1 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Ascites .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue "Mild (Grade 1)" .
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_ascites 2 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Ascites .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue "Moderate (Grade 2,3)" .
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_ascites 3 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Encephalopathy .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue "no" .
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_encephalopathy 1 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Encephalopathy .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue "Stage I - II" .
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_encephalopathy 2 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+
+{
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:Encephalopathy .
+ ?o1 surgiProp:hasPatient ?p .
+ ?o1 surgiProp:hasObsValue "Stage III - IV" .
+} => { 
+	surgi:scoresHelpNode surgiProp:has_score_encephalopathy 3 .
+	surgi:scoresHelpNode	surgiProp:hasPatient ?p .
+	} .
+	
+{
+ surgi:scoresHelpNode surgiProp:hasPatient ?p .
+ surgi:scoresHelpNode surgiProp:has_score_albumin ?alb .
+ surgi:scoresHelpNode surgiProp:has_score_bilirubin ?bil .
+ surgi:scoresHelpNode surgiProp:has_score_encephalopathy ?enc .
+ surgi:scoresHelpNode surgiProp:has_score_inr ?inr .
+ surgi:scoresHelpNode surgiProp:has_score_ascites ?asc .
+ (?bil ?alb ?asc ?enc ?inr) math:sum ?s .
+ ?s math:notLessThan 5 .
+ ?s math:notGreaterThan 6
+} => {
+	_:bmiObs a surgiCat:Observation .
+	_:bmiObs surgiProp:hasFactor surgi:ChildPugh .
+	_:bmiObs surgiProp:hasPatient ?p .
+	_:bmiObs surgiProp:has_score ?s . 
+        _:bmiObs surgiProp:hasObsValue "Stage_A" .
+} .
+
+{
+ surgi:scoresHelpNode surgiProp:hasPatient ?p .
+ surgi:scoresHelpNode surgiProp:has_score_albumin ?alb .
+ surgi:scoresHelpNode surgiProp:has_score_bilirubin ?bil .
+ surgi:scoresHelpNode surgiProp:has_score_encephalopathy ?enc .
+ surgi:scoresHelpNode surgiProp:has_score_inr ?inr .
+ surgi:scoresHelpNode surgiProp:has_score_ascites ?asc .
+ (?bil ?alb ?asc ?enc ?inr) math:sum ?s .
+ ?s math:notLessThan 7 .
+ ?s math:notGreaterThan 9
+} => {
+	_:bmiObs a surgiCat:Observation .
+	_:bmiObs surgiProp:hasFactor surgi:ChildPugh .
+	_:bmiObs surgiProp:hasPatient ?p .
+	_:bmiObs surgiProp:has_score ?s . 
+    _:bmiObs surgiProp:hasObsValue "Stage_B" .
+} .
+
+{
+ surgi:scoresHelpNode surgiProp:hasPatient ?p .
+ surgi:scoresHelpNode surgiProp:has_score_albumin ?alb .
+ surgi:scoresHelpNode surgiProp:has_score_bilirubin ?bil .
+ surgi:scoresHelpNode surgiProp:has_score_encephalopathy ?enc .
+ surgi:scoresHelpNode surgiProp:has_score_inr ?inr .
+ surgi:scoresHelpNode surgiProp:has_score_ascites ?asc .
+ (?bil ?alb ?asc ?enc ?inr) math:sum ?s .
+ ?s math:notLessThan 10 .
+ ?s math:notGreaterThan 15
+} => {
+	_:bmiObs a surgiCat:Observation .
+	_:bmiObs surgiProp:hasFactor surgi:ChildPugh .
+	_:bmiObs surgiProp:hasPatient ?p .
+	_:bmiObs surgiProp:has_score ?s . 
+    _:bmiObs surgiProp:hasObsValue "Stage_C" .
+} .

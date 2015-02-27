@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SemFormToABoxes/WebContent/files/descriptions&apos; to &apos;examples&apos;" description="Rename resource &apos;descriptions&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/files/descriptions" name="examples" stamp="1425013846297" updateReferences="true"/>
+</session>

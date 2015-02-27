@@ -1,0 +1,217 @@
+    @prefix xnat: <http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors#> .
+    @prefix xnatpatient: <http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors/Patient#> .
+    
+    @prefix surgi: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/> .
+	@prefix surgiProp: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A> .
+	@prefix surgiCat: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A> .
+    
+    @prefix log: <http://www.w3.org/2000/10/swap/log#>.
+    @prefix math: <http://www.w3.org/2000/10/swap/math#>.
+    @prefix time: <http://www.w3.org/2000/10/swap/time#>.
+    @prefix string: <http://www.w3.org/2000/10/swap/string#>.
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+ 
+#1    
+{ 
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:PositiveLymphNode .
+ ?o1 surgiProp:hasObsValue "no" .
+ ?o1 surgiProp:hasPatient ?p
+} => {
+	surgi:scoresHelpNode a log:Chaff .
+	surgi:scoresHelpNode surgiProp:hasScorePosNode 0 ;
+						surgiProp:hasPatient ?p .
+	} .
+
+#2
+{ 
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:PositiveLymphNode .
+ ?o1 surgiProp:hasObsValue "yes" .
+ ?o1 surgiProp:hasPatient ?p
+} => {
+	surgi:scoresHelpNode a log:Chaff .
+	surgi:scoresHelpNode surgiProp:hasScorePosNode 1 ;
+						surgiProp:hasPatient ?p .
+	} .	
+	
+#3    
+{ 
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:IntervalFromResectionToMetastases .
+ ?o1 surgiProp:hasObsValue ?interval .
+ ?o1 surgiProp:hasPatient ?p .
+ ?interval math:notLessThan 12
+} => {
+	surgi:scoresHelpNode surgiProp:hasScoreInterval 0 ;
+						surgiProp:hasPatient ?p .
+	} .
+
+#4
+{ 
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:IntervalFromResectionToMetastases .
+ ?o1 surgiProp:hasObsValue ?interval .
+ ?o1 surgiProp:hasPatient ?p .
+ ?interval math:lessThan 12
+} => {
+	surgi:scoresHelpNode surgiProp:hasScoreInterval 1 ;
+						surgiProp:hasPatient ?p .
+	} .
+
+#5
+{ 
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:NumberOfTumors .
+ ?o1 surgiProp:hasObsValue ?numTum .
+ ?o1 surgiProp:hasPatient ?p .
+ ?numTum math:notGreaterThan 1
+} => {
+	surgi:scoresHelpNode surgiProp:hasScoreNumTum 0 ;
+						surgiProp:hasPatient ?p .
+	} .
+	
+#6
+{ 
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:NumberOfTumors .
+ ?o1 surgiProp:hasObsValue ?numTum .
+ ?o1 surgiProp:hasPatient ?p .
+ ?numTum math:greaterThan 1
+} => {
+	surgi:scoresHelpNode surgiProp:hasScoreNumTum 1 ;
+						surgiProp:hasPatient ?p .
+	} .
+
+#7
+{ 
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:CEALevel .
+ ?o1 surgiProp:hasObsValue ?cea .
+ ?o1 surgiProp:hasPatient ?p .
+ ?cea math:notGreaterThan 200
+} => {
+	surgi:scoresHelpNode surgiProp:hasScoreCEA 0 ;
+						surgiProp:hasPatient ?p .
+	} .
+	
+#8
+{ 
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:CEALevel .
+ ?o1 surgiProp:hasObsValue ?cea .
+ ?o1 surgiProp:hasPatient ?p .
+ ?cea math:greaterThan 200
+} => {
+	surgi:scoresHelpNode surgiProp:hasScoreCEA 1 ;
+						surgiProp:hasPatient ?p .
+	} .	
+
+#9
+{ 
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:MaxTumorSize .
+ ?o1 surgiProp:hasObsValue ?maxTumorSize .
+ ?o1 surgiProp:hasPatient ?p .
+ ?maxTumorSize math:notGreaterThan 5
+} => {
+	surgi:scoresHelpNode surgiProp:hasScoreMaxTumorSize 0 ;
+						surgiProp:hasPatient ?p .
+	} .
+
+#10
+{ 
+ ?o1 a surgiCat:Observation . 
+ ?o1 surgiProp:hasFactor surgi:MaxTumorSize .
+ ?o1 surgiProp:hasObsValue ?maxTumorSize .
+ ?o1 surgiProp:hasPatient ?p .
+ ?maxTumorSize math:greaterThan 5
+} => {
+	surgi:scoresHelpNode surgiProp:hasScoreMaxTumorSize 1 ;
+						surgiProp:hasPatient ?p .
+	} .	
+
+#11
+{ 
+ surgi:scoresHelpNode surgiProp:hasPatient ?p .
+ surgi:scoresHelpNode surgiProp:hasScorePosNode ?posNode .
+ surgi:scoresHelpNode surgiProp:hasScoreInterval ?interval .
+ surgi:scoresHelpNode surgiProp:hasScoreNumTum ?num .
+ surgi:scoresHelpNode surgiProp:hasScoreCEA ?cea .
+ surgi:scoresHelpNode surgiProp:hasScoreMaxTumorSize ?msize .
+ (?posNode ?interval ?num ?cea ?msize) math:sum ?s .
+ ?s math:equalTo 5
+} => {
+	_:FongObs a surgiCat:Observation .
+	_:FongObs surgiProp:hasFactor surgi:Fong .
+	_:FongObs surgiProp:hasPatient ?p .
+	_:FongObs surgiProp:hasObsValue "Prognostic survival of 15 months" .
+	} .
+	
+#12
+{ 
+ surgi:scoresHelpNode surgiProp:hasPatient ?p .
+ surgi:scoresHelpNode surgiProp:hasScorePosNode ?posNode .
+ surgi:scoresHelpNode surgiProp:hasScoreInterval ?interval .
+ surgi:scoresHelpNode surgiProp:hasScoreNumTum ?num .
+ surgi:scoresHelpNode surgiProp:hasScoreCEA ?cea .
+ surgi:scoresHelpNode surgiProp:hasScoreMaxTumorSize ?msize .
+ (?posNode ?interval ?num ?cea ?msize) math:sum ?s .
+ ?s math:equalTo 4
+} => {
+	_:FongObs a surgiCat:Observation .
+	_:FongObs surgiProp:hasFactor surgi:Fong .
+	_:FongObs surgiProp:hasPatient ?p .
+	_:FongObs surgiProp:hasObsValue "Prognostic survival of 30 months" .
+	} .
+	
+#13
+{ 
+ surgi:scoresHelpNode surgiProp:hasPatient ?p .
+ surgi:scoresHelpNode surgiProp:hasScorePosNode ?posNode .
+ surgi:scoresHelpNode surgiProp:hasScoreInterval ?interval .
+ surgi:scoresHelpNode surgiProp:hasScoreNumTum ?num .
+ surgi:scoresHelpNode surgiProp:hasScoreCEA ?cea .
+ surgi:scoresHelpNode surgiProp:hasScoreMaxTumorSize ?msize .
+ (?posNode ?interval ?num ?cea ?msize) math:sum ?s .
+ ?s math:equalTo 3
+} => {
+	_:FongObs a surgiCat:Observation .
+	_:FongObs surgiProp:hasFactor surgi:Fong .
+	_:FongObs surgiProp:hasPatient ?p .
+	_:FongObs surgiProp:hasObsValue "Prognostic survival of 50 months" .
+	} .
+
+#14
+{ 
+ surgi:scoresHelpNode surgiProp:hasPatient ?p .
+ surgi:scoresHelpNode surgiProp:hasScorePosNode ?posNode .
+ surgi:scoresHelpNode surgiProp:hasScoreInterval ?interval .
+ surgi:scoresHelpNode surgiProp:hasScoreNumTum ?num .
+ surgi:scoresHelpNode surgiProp:hasScoreCEA ?cea .
+ surgi:scoresHelpNode surgiProp:hasScoreMaxTumorSize ?msize .
+ (?posNode ?interval ?num ?cea ?msize) math:sum ?s .
+ ?s math:equalTo 2
+} => {
+	_:FongObs a surgiCat:Observation .
+	_:FongObs surgiProp:hasFactor surgi:Fong .
+	_:FongObs surgiProp:hasPatient ?p .
+	_:FongObs surgiProp:hasObsValue "Prognostic survival of 73 months" .
+	} .
+	
+#15
+{ 
+ surgi:scoresHelpNode surgiProp:hasPatient ?p .
+ surgi:scoresHelpNode surgiProp:hasScorePosNode ?posNode .
+ surgi:scoresHelpNode surgiProp:hasScoreInterval ?interval .
+ surgi:scoresHelpNode surgiProp:hasScoreNumTum ?num .
+ surgi:scoresHelpNode surgiProp:hasScoreCEA ?cea .
+ surgi:scoresHelpNode surgiProp:hasScoreMaxTumorSize ?msize .
+ (?posNode ?interval ?num ?cea ?msize) math:sum ?s .
+ ?s math:equalTo 1
+} => {
+	_:FongObs a surgiCat:Observation .
+	_:FongObs surgiProp:hasFactor surgi:Fong .
+	_:FongObs surgiProp:hasPatient ?p .
+	_:FongObs surgiProp:hasObsValue "Prognostic survival of 74 months" .
+	} .

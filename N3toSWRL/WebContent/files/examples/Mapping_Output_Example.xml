@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	
+	xmlns:surgi="http://surgipedia.sfb125.de/wiki/Special:URIResolver/"
+	xmlns:surgiProp="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A"
+	xmlns:surgiCat="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A">
+
+	<rdf:Description rdf:about="http://www.example.com/Request_01_Example">
+		<rdf:type rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3ARequest"/>
+		<surgiProp:Has_N3RuleFile>
+			<rdf:Description rdf:about="http://141.52.218.34:8080/N3toSWRL/files/input/bn.n3">
+				<dc:format>text/n3</dc:format> 
+			</rdf:Description>
+		</surgiProp:Has_N3RuleFile>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/bn">
+				<rdf:type rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AGuidelineRule"/>
+ 				<surgiProp:Has_SWRLRuleFile rdf:resource="http://141.52.218.34:8080/N3toSWRL/files/output/bn.owl"/>
+ 	</rdf:Description>
+ 	
+ 	<rdf:Description rdf:about="http://141.52.218.34:8080/N3toSWRL/files/output/bn.owl">
+				<dc:format>application/rdf+xml</dc:format> 
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/bn#1">
+ 				<surgiProp:Has_Name rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/bn"/>
+ 				<surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Boris"/>
+ 			 	<surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Natasha"/>
+	</rdf:Description>
+	
+	<!-- OPTIONAL -->
+	
+	<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Boris">
+		<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	</rdf:Description>
+	
+	<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Natasha">
+		<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	</rdf:Description>
+	
+</rdf:RDF>

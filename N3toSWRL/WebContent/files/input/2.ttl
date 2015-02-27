@@ -1,0 +1,84 @@
+#Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp 
+        #    using base file:///DiplArbeit/OurWork/Eclipse_workSPACE2/N3toSWRL/WebContent/files/input/universal_patient1.ttl
+            @prefix log: <http://www.w3.org/2000/10/swap/log#> .
+    @prefix math: <http://www.w3.org/2000/10/swap/math#> .
+    @prefix string: <http://www.w3.org/2000/10/swap/string#> .
+    @prefix surgi: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/> .
+    @prefix surgiCat: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A> .
+    @prefix surgiProp: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A> .
+    @prefix time: <http://www.w3.org/2000/10/swap/time#> .
+    @prefix xnat: <http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors#> .
+    @prefix xnatpatient: <http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors/Patient#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:Albumin;
+             surgi:Property-3AhasObsValue 2.0;
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:Bilirubin;
+             surgi:Property-3AhasObsValue 2.5;
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:INR;
+             surgi:Property-3AhasObsValue 1.9;
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:Ascites;
+             surgi:Property-3AhasObsValue "no";
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:Encephalopathy;
+             surgi:Property-3AhasObsValue "Stage I - II";
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:TotalTumorSize;
+             surgi:Property-3AhasObsValue 7.5;
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:NumberOfTumors;
+             surgi:Property-3AhasObsValue 3;
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:MaxTumorSize;
+             surgi:Property-3AhasObsValue 3.5;
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:PositiveLymphNode;
+             surgi:Property-3AhasObsValue "yes";
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:IntervalFromResectionToMetastases;
+             surgi:Property-3AhasObsValue 8;
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:CEALevel;
+             surgi:Property-3AhasObsValue 150;
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:leaflet_sclerosis;
+             surgi:Property-3AhasObsValue "yes";
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:leaflet;
+             surgi:Property-3AhasObsValue "elongated";
+             surgi:Property-3AhasPatient xnatpatient:ABC ].
+    
+      [      a surgi:Category-3AObservation;
+             surgi:Property-3AhasFactor surgi:ChildPugh;
+             surgi:Property-3AhasObsValue "Stage_C";
+             surgi:Property-3AhasPatient xnatpatient:ABC;
+             surgi:Property-3Ahas_score 10 ].
+    
