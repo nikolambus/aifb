@@ -1,0 +1,65 @@
+package N3ReasonerFilesPackage;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.regex.Pattern;
+
+import org.semanticweb.owlapi.model.IRI;
+
+public class EligibleRingParser {
+
+	
+	/* search in the file <outputPath + PatientName + "_new.ttl"> for the observation with the factor "eligible_ring"
+	 * write the found factor value in the file <outputPath + reasoner_output_eligibleRingSet.txt> */
+	public void findEligibleRingValue(String outputPath, String PatientName) throws IOException {
+		
+		String inputFile = outputPath + PatientName + "_new.ttl";
+		String outputFile = outputPath + "reasoner_output_eligibleRingSet.txt";
+		
+		//creating outputFile
+		File output = new File(outputFile);
+        output.createNewFile();
+		
+		//reader to red from a file
+		BufferedReader br = new BufferedReader(new FileReader(inputFile));
+		
+		//writer to write in a file
+		PrintWriter writer = new PrintWriter(outputFile, "UTF-8");
+		
+		//help variables at the start of the loop
+		//current line
+		String line;
+		//is true if we are within the "eligible_ring observation"
+		Boolean elRingObs = false;
+		
+		//going through the patient file line by line 
+		while ((line = br.readLine()) != null) {
+			if (Pattern.matches("\\s*sp:Property-3Ahas_Heart_Factor hft-version:eligible_ring;", line)) {
+				elRingObs = true;
+			}
+			if ((elRingObs) && (Pattern.matches("\\s*sp:Property-3AobsValue \\s*[a-zA-Z_0-9:,?\"./]+", line))) {
+				int startQuoteSign = line.indexOf('"');
+				String eligibleRingValue = line.substring(startQuoteSign+1, line.indexOf('"', startQuoteSign+1));
+				
+				
+				
+				
+				
+				
+				//print the found ring to the outputFile
+				writer.println(outputFile);
+				
+				// new lines instead of commas!!!!!!!!!!
+				
+				elRingObs = false;
+			}
+		}
+		writer.close();
+		br.close();	 
+	}
+	
+}

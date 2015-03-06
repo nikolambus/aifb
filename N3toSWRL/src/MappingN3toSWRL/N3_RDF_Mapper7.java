@@ -34,11 +34,11 @@ public class N3_RDF_Mapper7 {
 
 	/*
 	 * @param
-	 * ruleN3file - URI of the n3 rule file (e.g.: http://141.52.218.34:8080/N3toSWRL/files/input/bla.n3)
+	 * ruleN3file - URI of the n3 rule file (e.g.: http://aifb-ls3-vm2.aifb.kit.edu:8080/N3toSWRL/files/input/bla.n3)
 	 * ruleName - String (e.g.: bla)
 	 * outputPath - application-sensitive path to the result file, which 
 	 * 				corresponds to the tomcat directory with appropriate cognitive app (e.g.: D:\DiplArbeit\OurWork\Eclipse_workSPACE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\N3toSWRL\files\output/bla.owl)
-	 * 				is reachable via appropriate URI (http://141.52.218.34:8080/N3toSWRL/files/output/bla.owl)
+	 * 				is reachable via appropriate URI (http://aifb-ls3-vm2.aifb.kit.edu:8080/N3toSWRL/files/output/bla.owl)
 	 */
 	public void action(String ruleN3file, String ruleName, String outputPath) throws IOException {
 				
@@ -157,7 +157,7 @@ public class N3_RDF_Mapper7 {
 			writer.println("");
 
 			//We specify with following variable the URI our target swrl rule file will be reachable through
-			String ruleSWRLfile = "http://141.52.218.34:8080/N3toSWRL/files/output/" + ruleName + ".owl";
+			String ruleSWRLfile = "http://aifb-ls3-vm2.aifb.kit.edu:8080/N3toSWRL/files/output/" + ruleName + ".owl";
     		
 			// Rule URI declaration
 			writer.println("<rdf:Description rdf:about=\"" + base + ruleName + "\">");

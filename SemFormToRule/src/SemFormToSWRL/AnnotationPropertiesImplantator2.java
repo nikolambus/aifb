@@ -24,7 +24,7 @@ public class AnnotationPropertiesImplantator2 {
 		PrintWriter writer = new PrintWriter(outputPath, "UTF-8");
 	
 	    //Now we specify the URI our target swrl rule will be reachable with
-		String ruleSWRLFile = "http://141.52.218.34:8080/SemFormToRule/files/output/" + ruleName + ".owl";
+		String ruleSWRLFile = "http://aifb-ls3-vm2.aifb.kit.edu:8080/SemFormToRule/files/output/" + ruleName + ".owl";
 		
 		//going through the OWL rule file line by line 
 	    BufferedReader br = new BufferedReader(new FileReader(inputPath));

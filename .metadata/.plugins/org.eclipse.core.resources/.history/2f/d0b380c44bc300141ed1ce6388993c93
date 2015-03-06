@@ -1,0 +1,46 @@
+package N3ReasonerFilesPackage;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.regex.Pattern;
+
+import org.semanticweb.owlapi.model.IRI;
+
+public class EligibleRingParser {
+
+	public String findEligibleRingValue(String outputPath, String PatientName) throws IOException {
+		
+		//our result
+		String result = null;
+		
+		//writer to write in a file
+		PrintWriter writer = new PrintWriter(outputPath, "UTF-8");
+		
+		//going through the patient file line by line 
+		BufferedReader br = new BufferedReader(new FileReader(outputPath + PatientName + "_new"));
+		String line;
+		while ((line = br.readLine()) != null) {
+			if (Pattern.matches("\\s*sp:Property-3Ahas_Heart_Factor hft-version:eligible_ring;", line)) {
+				String nextLine = br.readLine();
+				String nextNextLine = br.readLine();
+				int startQuoteSign = nextNextLine.indexOf('"');
+				result = nextNextLine.substring(startQuoteSign+1, nextNextLine.indexOf('"', startQuoteSign+1));
+				
+				//check
+				System.out.println ("Result: " + result);
+				// print result in file "reasoner_output_eligibleRingSet.txt"
+				// new lines instead of commas
+				
+				File outputFile2 = new File(outputPath + "bla");
+		        outputFile2.createNewFile();
+			}
+		}
+		
+		return result;
+	}
+	
+}

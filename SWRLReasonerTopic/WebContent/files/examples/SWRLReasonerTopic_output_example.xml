@@ -9,15 +9,15 @@
 	
 	<rdf:Description rdf:about="http://www.example.com/Request_05_Example">
 		<rdf:type rdf:resource="http://surgipedia.swrlrb125.de/wiki/Special:URIResolver/Category-3ARequest"/>
-		<surgiProp:Has_Topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Auffaelliger_Befund"/>
+		<surgiProp:Has_Topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Rektumkarzinom"/>
 		<surgiProp:Has_PatientFile>
-			<rdf:Description rdf:about="http://141.52.218.34:8080/SemFormToABoxes/files/output/Patient2Triples.owl">
+			<rdf:Description rdf:about="http://aifb-ls3-vm2.aifb.kit.edu:8080/SemFormToABoxes/files/output/TestPatient3.owl">
 				<dc:format>application/rdf+xml</dc:format> 
 			</rdf:Description>		
 		</surgiProp:Has_PatientFile>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="http://141.52.218.34:8080/SWRLReasonerTopic/files/output/Patient2Triples_new.owl">
+	<rdf:Description rdf:about="http://aifb-ls3-vm2.aifb.kit.edu:8080/SWRLReasonerTopic/files/output/TestPatient3_new.owl">
 				<dc:format>application/rdf+xml</dc:format> 
 	</rdf:Description>
 </rdf:RDF>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:msm="http://cms-wg.sti2.org/minimal-service-model#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl#" xmlns:sparql="http://www.w3.org/TR/rdf-sparql-query/#" xmlns:surgi="http://surgipedia.sfb125.de/wiki/Special:URIResolver/" xmlns:surgiProp="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A" xmlns:surgiCat="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A"  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+	<sp:Category-3ACognitive_App rdf:about="http://aifb-ls3-vm2.aifb.kit.edu:8080/N3ReasonerFiles">
+		<rdfs:label>N3 rules reasoner (based on files)</rdfs:label>
+		<owl:sameAs rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/N3ReasonerFiles"/>
+		<sp:Property-3AHas_version>1.0</sp:Property-3AHas_version>
+		<sp:Property-3ACreator rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/User-3Anikolaus" />
+		<sp:Property-3AHas_description xml:lang="en">Reasoning of given N3 rule file on given RDF patient file</sp:Property-3AHas_description>
+		<sp:Property-3AHasSourceCode rdf:resource="https://github.com/nikolambus/aifb/N3ReasonerFiles" />
+		<sp:Property-3AHasExampleRequest rdf:resource="http://aifb-ls3-vm2.aifb.kit.edu:8080/N3ReasonerFiles/files/examples/N3ReasonerFiles_Input_Example.xml" />
+		<sp:Property-3AHasExampleResponse rdf:resource="http://aifb-ls3-vm2.aifb.kit.edu:8080/N3ReasonerFiles/files/examples/N3ReasonerFiles_Output_Example.xml" />
+		<sawsdl:modelReference>
+			<msm:Precondition>
+				<rdf:value rdf:datatype="http://www.w3.org/TR/rdf-sparql-query/#GraphPattern">{
+	?request		rdf:type					surgiCat:Request.
+	?request		surgiProp:Has_N3RuleFile	?ruleFile.
+	?request		surgiProp:Has_PatientFile	?patientFile. 
+	?ruleFile		dc:format					\"text/n3\" . 
+	?patientFile	dc:format					\"text/turtle\" . 
+				}</rdf:value>
+			</msm:Precondition>
+		</sawsdl:modelReference>
+		<sawsdl:modelReference>
+			<msm:Postcondition>
+				<rdf:value rdf:datatype="http://www.w3.org/TR/rdf-sparql-query/#GraphPattern">{
+		?request		rdf:type					surgiCat:Request.
+	?request		surgiProp:Has_N3RuleFile	?ruleFile.
+	?request		surgiProp:Has_PatientFile	?patientFile. 
+	?ruleFile		dc:format					\"text/n3\" . 
+	?patientFile	dc:format					\"text/turtle\" . 
+	
+	?patientFileNew dc:format					\"text/turtle\" . 
+				}</rdf:value>
+			</msm:Postcondition>
+		</sawsdl:modelReference>
+	</sp:Category-3ACognitive_App>
+</rdf:RDF>

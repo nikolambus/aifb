@@ -11,13 +11,13 @@
 		<rdf:type rdf:resource="http://surgipedia.swrlrb125.de/wiki/Special:URIResolver/Category-3ARequest"/>
 		<surgiProp:Has_Topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Observation"/>
 		<surgiProp:Has_PatientFile>
-			<rdf:Description rdf:about="http://141.52.218.34:8080/N3ReasonerTopic/files/input/universal_patient.ttl">
+			<rdf:Description rdf:about="http://aifb-ls3-vm2.aifb.kit.edu:8080/N3ReasonerTopic/files/input/universal_patient1.ttl">
 				<dc:format>text/turtle</dc:format> 
 			</rdf:Description>		
 		</surgiProp:Has_PatientFile>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="http://141.52.218.34:8080/N3ReasonerTopic/files/output/universal_patient_new.ttl">
+	<rdf:Description rdf:about="http://aifb-ls3-vm2.aifb.kit.edu:8080/N3ReasonerTopic/files/output/universal_patient1_new.ttl">
 				<dc:format>text/turtle</dc:format> 
 	</rdf:Description>
 </rdf:RDF>

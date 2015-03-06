@@ -117,7 +117,7 @@ public class ReasonerService {
 			if (patient.contains("/")) {
 				// we do not need the extension within a patient name
 				if (patient.contains(".")) 
-					patientName = patient.substring(patient.lastIndexOf("/")+1, patient.indexOf("."));
+					patientName = patient.substring(patient.lastIndexOf("/")+1, patient.lastIndexOf("."));
 				else 
 					patientName = patient.substring(patient.lastIndexOf("/")+1, patient.length());
 			}

@@ -15,6 +15,6 @@
 	
 	<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/ContextPancreas1">
 		<surgiProp:BelongsToPhase rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual/mobilisation1"/> 
-		<surgiProp:Has_phaseContextFile rdf:resource="http://141.52.218.34:8080/PhaseRecognizer/files/output/ContextPancreas1_new.owl"/>		
+		<surgiProp:Has_phaseContextFile rdf:resource="http://aifb-ls3-vm2.aifb.kit.edu:8080/PhaseRecognizer/files/output/ContextPancreas1_new.owl"/>		
 	</rdf:Description>
 </rdf:RDF>

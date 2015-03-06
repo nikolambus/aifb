@@ -124,7 +124,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="SemFormToRule" path="/SemFormToRule" reloadable="true" source="org.eclipse.jst.jee.server:SemFormToRule"/><Context docBase="SemFormToABoxes" path="/SemFormToABoxes" reloadable="true" source="org.eclipse.jst.jee.server:SemFormToABoxes"/><Context docBase="N3toSWRL" path="/N3toSWRL" reloadable="true" source="org.eclipse.jst.jee.server:N3toSWRL"/><Context docBase="SWRLReasoner" path="/SWRLReasoner" reloadable="true" source="org.eclipse.jst.jee.server:SWRLReasoner"/></Host>
+      <Context docBase="SemFormToRule" path="/SemFormToRule" reloadable="true" source="org.eclipse.jst.jee.server:SemFormToRule"/><Context docBase="SemFormToABoxes" path="/SemFormToABoxes" reloadable="true" source="org.eclipse.jst.jee.server:SemFormToABoxes"/><Context docBase="N3toSWRL" path="/N3toSWRL" reloadable="true" source="org.eclipse.jst.jee.server:N3toSWRL"/><Context docBase="SWRLReasoner" path="/SWRLReasoner" reloadable="true" source="org.eclipse.jst.jee.server:SWRLReasoner"/><Context docBase="N3ReasonerFiles" path="/N3ReasonerFiles" reloadable="true" source="org.eclipse.jst.jee.server:N3ReasonerFiles"/><Context docBase="N3Reasoner" path="/N3Reasoner" reloadable="true" source="org.eclipse.jst.jee.server:N3Reasoner"/></Host>
     </Engine>
   </Service>
 </Server>

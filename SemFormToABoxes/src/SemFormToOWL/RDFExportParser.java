@@ -112,7 +112,7 @@ public class RDFExportParser {
 		String ABoxesName = ABoxesURI.substring(ABoxesURI.lastIndexOf("/")+1, ABoxesURI.length());
 	    
 	    //Now we specify the address our patient / context owl file will be reachable from
-	  	String ABoxesFile = "http://141.52.218.34:8080/SemFormToABoxes/files/output/" + ABoxesName + ".owl";
+	  	String ABoxesFile = "http://aifb-ls3-vm2.aifb.kit.edu:8080/SemFormToABoxes/files/output/" + ABoxesName + ".owl";
 		
 	  	/* Following 2 lines allow to add an annotation property to a RDF node without creation of named individual
 	  	 * Use it for specifying the relationship between ABoxes-URI and ABoxes-File

@@ -110,7 +110,7 @@ public class Service {
 			if (ruleFile.contains("/")) {
 				// we do not need the extension within a rule name
 				if (ruleFile.contains(".")) 
-					ruleName = ruleFile.substring(ruleFile.lastIndexOf("/")+1, ruleFile.indexOf("."));
+					ruleName = ruleFile.substring(ruleFile.lastIndexOf("/")+1, ruleFile.lastIndexOf("."));
 				else 
 					ruleName = ruleFile.substring(ruleFile.lastIndexOf("/")+1, ruleFile.length());
 			}

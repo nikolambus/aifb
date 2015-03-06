@@ -62,9 +62,8 @@ public class Helper {
 	public static String getSparqlInputPattern() {
 		String startFrame = "\n" + "SELECT * WHERE { ";
 		String inputPattern = "?request		surgiProp:Has_PatientFile		?patientFile." + "\n" + 
-							  "?request		surgiProp:Has_N3Rule		?ruleFile." + "\n" +
+							  "?request		surgiProp:Has_N3RuleFile		?ruleFile." + "\n" +
 							  "?patientFile		dc:format			\"text/turtle\" ." + "\n" + 
-							  "?ruleFile		rdf:type 			surgiCat:GuidelineRule ." + "\n" + 
 							  "?ruleFile	 	dc:format 			\"text/n3\" ."; 
 		String endFrame = "}";
 		

@@ -53,7 +53,7 @@ public class ReasonerService {
 	@POST
 	@Path("/input")
 	@Consumes("application/rdf+xml")
-	public void postStuff(String rdf, @Context final HttpServletResponse servletResponse, @Context final HttpServletRequest servletRequest, @Context final ServletContext context) throws IOException, SAXException {
+	public void postStuff(String rdf, @Context final HttpServletResponse servletResponse, @Context final HttpServletRequest servletRequest, @Context final ServletContext context) throws IOException, SAXException, InterruptedException {
 		
 		// our PLAN
 		/* String rdf is read (via POST from Postman) and has a rdf/xml structure that should satisfy the pattern in Helper.getSparqlInputPattern()
@@ -114,7 +114,7 @@ public class ReasonerService {
 			if (patientFile.contains("/")) {
 				// we do not need the extension within a patient name
 				if (patientFile.contains(".")) 
-					patientName = patientFile.substring(patientFile.lastIndexOf("/")+1, patientFile.indexOf("."));
+					patientName = patientFile.substring(patientFile.lastIndexOf("/")+1, patientFile.lastIndexOf("."));
 				else 
 					patientName = patientFile.substring(patientFile.lastIndexOf("/")+1, patientFile.length());
 			}
@@ -142,6 +142,12 @@ public class ReasonerService {
 				//execute it
 				Process proc = rt.exec(cmd);		
 			
+				/* only for the project B01
+				 * wait till cmd and cwm have finished
+				 * then write the found eligible in a extra file */		
+	        	Thread.sleep(7500);
+				EligibleRingParser parser = new EligibleRingParser();
+				parser.findEligibleRingValue(outputPath, patientName);			
 		}
 	}
 	

@@ -86,4 +86,23 @@
   surgiProp:hasObsValue "elongated" ;
   surgiProp:hasPatient xnatpatient:ABC
 ] .
-    
+
+ # POSTOPLIVERFAILURE
+
+[ a surgiCat:Observation;
+  surgiProp:hasFactor xnat:abnormalLabParameters ;
+  surgiProp:hasObsValue "yes" ;
+  surgiProp:hasPatient xnatpatient:ABC
+] .
+
+[ a surgiCat:Observation;
+  surgiProp:hasFactor xnat:changesInClinicalManagement ;
+  surgiProp:hasObsValue "no" ;
+  surgiProp:hasPatient xnatpatient:ABC
+] .
+
+[ a surgiCat:Observation;
+  surgiProp:hasFactor xnat:invasiveTreatment ;
+  surgiProp:hasObsValue "no" ;
+  surgiProp:hasPatient xnatpatient:ABC
+] .     

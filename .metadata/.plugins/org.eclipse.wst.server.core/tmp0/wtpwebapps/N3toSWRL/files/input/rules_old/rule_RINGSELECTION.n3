@@ -28,7 +28,7 @@
 } => {
 	_:bnode a baseCat:Observation ; 
 		baseProp:hasFactor base:MR ; 
-     	baseProp:hasObsValue "degenerative" ;
+	     	baseProp:hasObsValue "degenerative" ;
   		baseProp:hasPatient ?p .
       } .
 
