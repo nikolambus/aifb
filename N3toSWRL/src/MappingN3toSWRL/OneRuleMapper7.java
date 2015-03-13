@@ -172,7 +172,7 @@ public class OneRuleMapper7 {
 			transit = transit + "\n";
 
 			transit = transit + " <swrl:Imp rdf:about=\"" + base + ruleName + "\">" + "\n";
-			transit = transit + tabBody + "<base:Property-3AHas_name rdf:resource=\"" + ruleURI + "\"/>" + "\n";
+			transit = transit + tabBody + "<surgiProp:Has_name rdf:resource=\"" + ruleURI + "\"/>" + "\n";
 			
 			// immediate body, construct a list iteratively
 			transit = transit + tabBody + "<swrl:body>" + "\n";
@@ -604,7 +604,7 @@ public class OneRuleMapper7 {
 															}
 															else {
 																
-																if (!Pattern.matches("\\s*[{]\\s*", line)) 
+																if ((!Pattern.matches("\\s*", line)) && (!Pattern.matches("\\s*[{]\\s*", line))) 
 																	System.out.println("Following n3 line hasn't matched any pattern: " + line);
 															}
 														}
@@ -1014,7 +1014,7 @@ public class OneRuleMapper7 {
 				 * 1) is it "a"?
 				 * 2) access the corresponding page from SMW
 				 * 
-				 * Then, before outputting the predicate we'll perform predicate prefix resolving
+				 * Then, before outputting the predicate, we'll perform predicate prefix resolving
 				 */
 				predicate = predicateWithPrefix.substring(predicateWithPrefix.indexOf(":")+1, predicateWithPrefix.length());			
 			}
@@ -1098,7 +1098,7 @@ public class OneRuleMapper7 {
 
 			result = result + tab + "<rdf:Description>" + "\n";
 			result = result + tab + "    <rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#BuiltinAtom\"/>" + "\n";
-			result = result + tab + "    <base:Property-3AIs_premise_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
+			result = result + tab + "    <surgiProp:Is_premise_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
 			result = result + tab + "    <swrl:builtin rdf:resource=\"http://www.w3.org/2003/11/swrlb#" + predicate + "\"/>" + "\n";
 			result = result + tab + "    <swrl:arguments>" + "\n";
 			result = result + tab + "        <rdf:Description>" + "\n";
@@ -1165,7 +1165,7 @@ public class OneRuleMapper7 {
 				result = result + tab + "<rdf:Description>" + "\n";
 				result = result + tab + "	<rdf:type rdf:resource=\"http://www.w3.org/2003/11/swrl#BuiltinAtom\"/>" + "\n";
 				result = result + tab + "	<swrl:builtin rdf:resource=\"http://www.w3.org/2003/11/swrlb#" + predicate + "\"/>" + "\n";
-				result = result + tab + "	<base:Property-3AIs_premise_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
+				result = result + tab + "	<surgiProp:Is_premise_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
 				result = result + tab + "	<swrl:arguments>" + "\n";
 				result = result + tab + "		<rdf:Description>" + "\n";
 				result = result + tab + "			<rdf:type rdf:resource=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#List\"/>" + "\n";
@@ -1188,9 +1188,9 @@ public class OneRuleMapper7 {
 					//output ClassAtom into the result file
 					result = result + tab + "<swrl:ClassAtom>" + "\n";
 					if (rulePart.equalsIgnoreCase("body")) 
-						result = result + tab + "  <base:Property-3AIs_premise_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
+						result = result + tab + "  <surgiProp:Is_premise_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
 					else 
-						result = result + tab + "  <base:Property-3AIs_conclusion_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
+						result = result + tab + "  <surgiProp:Is_conclusion_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
 					result = result + tab + "  <swrl:argument1 rdf:resource=\"" + subject + "\"/>" + "\n"; 
 					result = result + tab + "  <swrl:classPredicate rdf:resource=\"" + objectFull + "\"/>" + "\n"; 
 					result = result + tab + "</swrl:ClassAtom>" + "\n";
@@ -1199,6 +1199,7 @@ public class OneRuleMapper7 {
 				
 				//if it's a "subject predicate object" triple
 				else {
+					
 					//get the RDF export of the current predicate
 					Scanner scanner = new Scanner(new URL("http://surgipedia.sfb125.de/wiki/Special:ExportRDF/Property:" + predicate).openStream(), "UTF-8").useDelimiter("\\A");
 					String currentPredicatePage = scanner.next();
@@ -1227,14 +1228,24 @@ public class OneRuleMapper7 {
 					
 					// Searching for the line which contains "swivt:type ... wpg" on the RDF Export page. 
 					// For this do activate RegEx multiline modus with (?sm)
+
+					//check
+					System.out.println("BIBA!!!!!!!!!!!!");
+					System.out.println("currentPredicatePage: " + currentPredicatePage);
+					
 					if (Pattern.matches("(?sm).*^\t\t<swivt:type rdf:resource=\"http://semantic-mediawiki.org/swivt/1.0#_wpg\"/>$.*", currentPredicatePage)) {
+
+						//check
+						System.out.println("WPG!!!!!!!!!!!!");
+						System.out.println("Predicate: " + predicate);
 						
+						//if found - it's an object property
 						//output IndividualPropertyAtom into the result file
 						result = result + tab + "<swrl:IndividualPropertyAtom>" + "\n";
 						if (rulePart.equalsIgnoreCase("body")) 
-							result = result + tab + "  <base:Property-3AIs_premise_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
+							result = result + tab + "  <surgiProp:Is_premise_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
 						else 
-							result = result + tab + "  <base:Property-3AIs_conclusion_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
+							result = result + tab + "  <surgiProp:Is_conclusion_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
 						result = result + tab + "  <swrl:argument1 rdf:resource=\"" + subject + "\"/>" + "\n"; 
 						result = result + tab + "  <swrl:propertyPredicate rdf:resource=\"" + predicateFull + "\"/>" + "\n"; 
 				
@@ -1248,18 +1259,19 @@ public class OneRuleMapper7 {
 							result = result + tab + "</swrl:IndividualPropertyAtom>" + "\n";
 							
 							//we save object as an concept individual into the concepts bank
-							if (!conceptsBank.contains(objectFull))
+							if (!conceptsBank.contains(objectFull)) 
 								conceptsBank.add(objectFull);
 						}
 					}	
 					else {			
 						
+						//if not found - it's a datatype property
 						//output DatavaluedPropertyAtom into the result file
 						result = result + tab + "<swrl:DatavaluedPropertyAtom>" + "\n";
 						if (rulePart.equalsIgnoreCase("body")) 
-							result = result + tab + "  <base:Property-3AIs_premise_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
+							result = result + tab + "  <surgiProp:Is_premise_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
 						else 
-							result = result + tab + "  <base:Property-3AIs_conclusion_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
+							result = result + tab + "  <surgiProp:Is_conclusion_of rdf:resource=\"" + base + ruleName + "\"/>" + "\n";
 						result = result + tab + "  <swrl:argument1 rdf:resource=\"" + subject + "\"/>" + "\n"; 
 						result = result + tab + "  <swrl:propertyPredicate rdf:resource=\"" + predicateFull + "\"/>" + "\n"; 
 						
@@ -1374,7 +1386,7 @@ public class OneRuleMapper7 {
 					if (topic.contains(":")) {
 						String topicPrefix = topic.substring(0, topic.indexOf(":"));
 						String topicConcept = topic.substring(topic.indexOf(":")+1);
-						result = result + tab + "   <base:Property-3AHas_topic rdf:resource=\"" + prefixResolver(topicPrefix, allPrefixuris) + topicConcept + "\"/>" + "\n";
+						result = result + tab + "   <surgiProp:Has_topic rdf:resource=\"" + prefixResolver(topicPrefix, allPrefixuris) + topicConcept + "\"/>" + "\n";
 					}
 				}	
 			}			

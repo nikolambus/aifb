@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SWRLReasonerTopic/WebContent/files/descriptions/SWRLReasonerTopic_description&apos; to &apos;SWRLReasonerTopic_description.xml&apos;" description="Rename resource &apos;SWRLReasonerTopic_description&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/files/descriptions/SWRLReasonerTopic_description" name="SWRLReasonerTopic_description.xml" stamp="1425968005587" updateReferences="true"/>
+</session>

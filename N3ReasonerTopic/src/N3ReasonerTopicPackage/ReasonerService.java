@@ -261,20 +261,19 @@ public class ReasonerService {
 		}
 	}
 	
-	/* can be adapted
 	@GET
-	@Path("/descriptionTTL")
-	@Produces("application/rdf+turtle")
-	public String getDescription(@Context final HttpServletResponse servletResponse, @Context final HttpServletRequest servletRequest, @Context final ServletContext context) throws Exception {
-
-		//get the descriptions path via ServletContext method "getRealPath" (see explanation how does it work at the end)
+	@Path("/description")
+	@Produces("application/rdf+xml")
+	public String getServiceDescriptionRDFXML(@Context final HttpServletResponse response, @Context final ServletContext context) throws Exception {
+	
+		//get the descriptions path via ServletContext method "getRealPath"
 		String descriptionsPath = context.getRealPath("/files/descriptions/") + "/";
 
-		//choose the "LF_turtle.ttl" file from the folder with descriptions and output it as response to @GET @Path "/descriptionTTL"
-		ServiceHelper.printRDFDescriptionFromFile(descriptionsPath + "LF_turtle.ttl", servletResponse, context, "application/rdf+turtle");
+		//choose the appropriate file from the folder with descriptions and output it as response to @GET @Path "/description"
+		ServiceHelper.printRDFDescriptionFromFile(descriptionsPath + "N3ReasonerTopic_description.xml", response, context, "application/rdf+xml");
+			
 		return "";
 	}
-	*/
 	
 	@GET
 	@Path("/descriptionHTML")

@@ -33,7 +33,7 @@ public class ServiceHelper {
 		namespaceList.add("PREFIX owl: <http://www.w3.org/2002/07/owl#>");
 		namespaceList.add("PREFIX surgi: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/>");
 		namespaceList.add("PREFIX surgiProp: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A>");
-		namespaceList.add("PREFIX surgiCat: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A>");
+		namespaceList.add("PREFIX surgiCat: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A>");
 		namespaceList.add("PREFIX foaf: <http://xmlns.com/foaf/0.1/>");
 		namespaceList.add("PREFIX dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=elements#>");
 		return namespaceList;

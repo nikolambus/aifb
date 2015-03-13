@@ -6,7 +6,11 @@
 		<item value="Apache Tomcat v7.0"/>
 	</list>
 	<list key="J2EE_EXPORT_JST_WEB">
-		<item value="C:\xampp\tomcat\webapps\N3ReasonerFiles.war"/>
-		<item value="C:\xampp\tomcat\webapps\SemFormToRule.war"/>
+		<item value="C:\xampp\tomcat\webapps\SWRLReasonerTopic.war"/>
+		<item value="C:\xampp\tomcat\webapps\SWRLReasoner.war"/>
+		<item value="C:\xampp\tomcat\webapps\SemFormToABoxes.war"/>
+		<item value="C:\xampp\tomcat\webapps\PhaseRecognizer.war"/>
+		<item value="C:\xampp\tomcat\webapps\N3toSWRL.war"/>
+		<item value="C:\xampp\tomcat\webapps\N3ReasonerTopic.war"/>
 	</list>
 </section>

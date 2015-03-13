@@ -10,18 +10,18 @@
 	<rdf:Description rdf:about="http://www.example.com/Request_Triples_Example">
 		<rdf:type rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3ARequest"/>
 		<surgiProp:Has_ABoxes>
-			<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Patient2Triples">
+			<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/TestPatient2">
 				<rdf:type rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AABoxes"/>
 			</rdf:Description>		
 		</surgiProp:Has_ABoxes>	
 	</rdf:Description>
 		
-	<rdf:Description rdf:about="http://aifb-ls3-vm2.aifb.kit.edu:8080/SemFormToABoxes/files/output/Patient2Triples.owl">
+	<rdf:Description rdf:about="http://aifb-ls3-vm2.aifb.kit.edu:8080/SemFormToABoxes/files/output/TestPatient2.owl">
 				<dc:format>application/rdf+xml</dc:format> 
 	</rdf:Description>
 		
-	<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Patient2Triples">
+	<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/TestPatient2">
 				<rdf:type rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AABoxes"/>
- 				<surgiProp:Has_ABoxesFile rdf:resource="http://aifb-ls3-vm2.aifb.kit.edu:8080/SemFormToABoxes/files/output/Patient2Triples.owl"/>
+ 				<surgiProp:Has_ABoxesFile rdf:resource="http://aifb-ls3-vm2.aifb.kit.edu:8080/SemFormToABoxes/files/output/TestPatient2.owl"/>
 	</rdf:Description>	
 </rdf:RDF>

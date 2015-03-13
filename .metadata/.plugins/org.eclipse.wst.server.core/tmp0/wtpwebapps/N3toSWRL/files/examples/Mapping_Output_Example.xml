@@ -18,7 +18,7 @@
 	
 	<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF">
 				<rdf:type rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AGuidelineRule"/>
- 				<surgiProp:Has_SWRLRuleFile rdf:resource="http://aifb-ls3-vm2.aifb.kit.edu:8080/N3toSWRL/files/output/bn.owl"/>
+ 				<surgiProp:Has_SWRLRuleFile rdf:resource="http://aifb-ls3-vm2.aifb.kit.edu:8080/N3toSWRL/files/output/rule_SF.owl"/>
  	</rdf:Description>
  	
  	<rdf:Description rdf:about="http://aifb-ls3-vm2.aifb.kit.edu:8080/N3toSWRL/files/output/rule_SF.owl">
@@ -27,8 +27,9 @@
 	
 	<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1">
  				<surgiProp:Has_Name rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF"/>
- 				<surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Boris"/>
- 			 	<surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Natasha"/>
+ 				<surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/NumberOfTumors"/>
+ 			 	<surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/MaxTumorSize"/>
+ 			 	<surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/TotalTumorSize"/>			 	
 	</rdf:Description>
 	
 	<!-- OPTIONAL -->

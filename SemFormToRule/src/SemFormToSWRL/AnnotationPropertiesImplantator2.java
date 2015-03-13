@@ -136,9 +136,45 @@ public class AnnotationPropertiesImplantator2 {
 					for (int i=0; i < classNames.size(); i++)
 						writer.println("        <Property-3AHas_topic rdf:resource=\"" + base + classNames.get(i) + "\"/>");
 				}
-				else {
-					writer.println(nextLine);
-					writer.println(nextnextLine);
+				else { 
+					/* </rdf:Description> occurs pretty often. So we should take care not to lose some information 
+					 * in the nextLine and nextNextLine after "</Description>". 
+					 * For example <swrl:head> or <swrl:body> could stand in one of these lines. 
+					 * So they need to be processed.  */
+					
+					//mark the moment when we have reached the line with <swrl:body>
+					if (Pattern.matches("\\s*<swrl:body>\\s*", nextLine)) {
+						System.out.println("Start of the body!");
+						bodyFlag = true;
+						writer.println(nextLine);
+					}	
+					else {
+						//mark the moment when we have reached the line with <swrl:head>
+						if (Pattern.matches("\\s*<swrl:head>\\s*", nextLine)) {
+							System.out.println("Start of the head!");
+							bodyFlag = false;
+							writer.println(nextLine);
+						}
+						else 
+							writer.println(nextLine);
+					}
+					
+					//mark the moment when we have reached the line with <swrl:body>
+					if (Pattern.matches("\\s*<swrl:body>\\s*", nextnextLine)) {
+						System.out.println("Start of the body!");
+						bodyFlag = true;
+						writer.println(nextnextLine);
+					}	
+					else {
+						//mark the moment when we have reached the line with <swrl:head>
+						if (Pattern.matches("\\s*<swrl:head>\\s*", nextnextLine)) {
+							System.out.println("Start of the head!");
+							bodyFlag = false;
+							writer.println(nextnextLine);
+						}
+						else 
+							writer.println(nextnextLine);
+					}
 				}	
 			}
 			

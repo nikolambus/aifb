@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SemFormToRule/WebContent/files/descriptions/SemFormToRule_description&apos; to &apos;SemFormToRule_description.xml&apos;" description="Rename resource &apos;SemFormToRule_description&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/files/descriptions/SemFormToRule_description" name="SemFormToRule_description.xml" stamp="1425967742099" updateReferences="true"/>
+</session>

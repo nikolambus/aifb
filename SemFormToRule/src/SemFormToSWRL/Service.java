@@ -78,7 +78,7 @@ public class Service {
 		String querystring = sparql_prefixes + sparql_input_pattern;
 		
 		//check
-		//System.out.println(querystring);
+		System.out.println("Query:" + querystring);
 		
 		//Encodes this String into a sequence of bytes
 		InputStream in = new ByteArrayInputStream(rdf.getBytes());
@@ -88,9 +88,15 @@ public class Service {
 		
 	    //Add statements from a document. This method assumes the concrete syntax is RDF/XML
 		model.read(in, "");
+	
+		//check
+		System.out.println("in:" + in);
 		
 		//Close the Model and free up resources held.
 		in.close();
+		
+		//check
+		System.out.println("Model:" + model);
 		
 		QuerySolution soln = ServiceHelper.evaluationOfSPARQLQueryAgainstModel(querystring, model);
 		
@@ -123,13 +129,16 @@ public class Service {
 			//get the output folder of the Cognitive App via ServletContext method "getRealPath"
 			String outputPath = context.getRealPath("/files/output/") + "\\" + ruleName + "_without_annotations.owl";
 		
-			//now we should build a bridge between "http://surgipedia.sfb125.de/wiki/Special:URIResolver/RudisRule2" and http://surgipedia.sfb125.de/wiki/Special:RDFExport/RudisRule2
+			//now we should build a bridge between "http://surgipedia.sfb125.de/wiki/Special:URIResolver/TestRule2" and http://surgipedia.sfb125.de/wiki/Special:RDFExport/TestRule2
 			String rdfExport =  "http://surgipedia.sfb125.de/wiki/Special:ExportRDF/" + ruleName;
 			
 			//getting the RDF export of the rule's page in SMW
-			Scanner scanner = new Scanner(new URL(rdfExport).openStream(), "UTF-8").useDelimiter("\\A");
+			Scanner scanner = new Scanner(new URL("http://surgipedia.sfb125.de/wiki/Special:URIResolver/2._SFB-2DRetreat_2013").openStream(), "UTF-8").useDelimiter("\\A");
 			String out = scanner.next();
 		
+			System.out.println("OUT:");
+			System.out.println(out);
+			
 			//Wiki rule --> SWRL rule string
 			RDFExportParser parser = new RDFExportParser();
 			String rule = parser.CreateRule(out);
@@ -175,19 +184,19 @@ public class Service {
 		}
 	}
 	
-	/*
 	@GET
-	@Path("/descriptionRDF")
+	@Path("/description")
 	@Produces("application/rdf+xml")
-	public String getDescription(@Context final HttpServletResponse servletResponse, @Context final HttpServletRequest servletRequest, @Context final ServletContext context) throws Exception {
-		//get the descriptions path via ServletContext method "getRealPath" (see explanation how does it work at the end)
+	public String getServiceDescriptionRDFXML(@Context final HttpServletResponse response, @Context final ServletContext context) throws Exception {
+	
+		//get the descriptions path via ServletContext method "getRealPath"
 		String descriptionsPath = context.getRealPath("/files/descriptions/") + "/";
 
-		//choose the "LF_turtle.ttl" file from the folder with descriptions and output it as response to @GET @Path "/descriptionTTL"
-		ServiceHelper.printRDFDescriptionFromFile(descriptionsPath + "SF_description.xml", servletResponse, context, "application/rdf+xml");
+		//choose the appropriate file from the folder with descriptions and output it as response to @GET @Path "/description"
+		ServiceHelper.printRDFDescriptionFromFile(descriptionsPath + "SemFormToRule_description.xml", response, context, "application/rdf+xml");
+			
 		return "";
 	}
-	*/
 	
 	@GET
 	@Path("/descriptionHTML")

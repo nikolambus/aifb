@@ -41,6 +41,7 @@ public class ServiceHelper {
 		namespaceList.add("PREFIX foaf: <http://xmlns.com/foaf/0.1/>");
 		namespaceList.add("PREFIX dc: <http://purl.org/dc/elements/1.1/>");
 		namespaceList.add("PREFIX surgiProp: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A>");
+		namespaceList.add("PREFIX surgiCat: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A>");
 		return namespaceList;
 	}
 

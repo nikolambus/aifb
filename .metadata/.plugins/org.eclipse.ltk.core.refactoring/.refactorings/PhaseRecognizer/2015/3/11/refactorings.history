@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;PhaseRecognizer/WebContent/files/descriptions/PhaseRecognizer_description&apos; to &apos;PhaseRecognizer_description.xml&apos;" description="Rename resource &apos;PhaseRecognizer_description&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/files/descriptions/PhaseRecognizer_description" name="PhaseRecognizer_description.xml" stamp="1425967514838" updateReferences="true"/>
+</session>

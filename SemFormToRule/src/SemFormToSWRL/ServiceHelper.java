@@ -34,7 +34,7 @@ public class ServiceHelper {
 		namespaceList.add("PREFIX foaf: <http://xmlns.com/foaf/0.1/>");
 		namespaceList.add("PREFIX surgi: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/>");
 		namespaceList.add("PREFIX surgiProp: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A>");
-		namespaceList.add("PREFIX surgiCat: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A>");
+		namespaceList.add("PREFIX surgiCat: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A>");
 		namespaceList.add("PREFIX dc: <http://dublincore.org/documents/2012/06/14/dcmi-terms/?v=elements#>");
 		return namespaceList;
 	}
@@ -55,7 +55,7 @@ public class ServiceHelper {
 	public static String getSparqlInputPattern() {
 		String startFrame = "\n" + "SELECT * WHERE { ";
 		String inputPattern = "?request		surgiProp:Has_SWRLRule ?ruleURI ." + "\n" + 
-							  "?ruleURI	rdf:type			surgiCat:OntologyRule .";
+							  "?ruleURI		rdf:type 			   surgiCat:OntologyRule .";
 		String endFrame = "}";
 		
 		String together = "\n" + startFrame + "\n" + inputPattern + "\n" + endFrame;

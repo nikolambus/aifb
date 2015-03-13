@@ -1,0 +1,5 @@
+127.0.0.1 - - [07/Mar/2015:17:10:36 +0100] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [07/Mar/2015:17:19:50 +0100] "GET /N3toSWRL/files/input/rule_SF.n3 HTTP/1.1" 200 3980
+0:0:0:0:0:0:0:1 - - [07/Mar/2015:17:19:56 +0100] "POST /N3toSWRL/mapping/input HTTP/1.1" 204 -
+127.0.0.1 - - [07/Mar/2015:18:47:38 +0100] "GET /N3toSWRL/files/input/rule_SF.n3 HTTP/1.1" 200 3980
+0:0:0:0:0:0:0:1 - - [07/Mar/2015:18:47:38 +0100] "POST /N3toSWRL/mapping/input HTTP/1.1" 500 4873

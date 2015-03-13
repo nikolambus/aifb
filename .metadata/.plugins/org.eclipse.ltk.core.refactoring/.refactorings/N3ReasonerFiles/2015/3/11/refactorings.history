@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;N3ReasonerFiles/WebContent/files/descriptions/N3ReasonerFiles_description&apos; to &apos;N3ReasonerFiles_description.xml&apos;" description="Rename resource &apos;N3ReasonerFiles_description&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/files/descriptions/N3ReasonerFiles_description" name="N3ReasonerFiles_description.xml" stamp="1425966567126" updateReferences="true"/>
+</session>

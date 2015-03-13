@@ -24,7 +24,7 @@ public class N3_RDF_Mapper7 {
 	public String ruleTransit = null;
 
 	public List<String> internPrefixuris = new ArrayList<String>();
-	public List<String> globalPrefixuris = new ArrayList<String>(Arrays.asList("rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"", "rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"", "owl=\"http://www.w3.org/2002/07/owl#\"", "swrl=\"http://www.w3.org/2003/11/swrl#\"", "xsd=\"http://www.w3.org/2001/XMLSchema#\"", "surgi=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/\"", "surgiVar=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#\"", "surgiProp=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A\""));
+	public List<String> globalPrefixuris = new ArrayList<String>(Arrays.asList("rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"", "rdfs=\"http://www.w3.org/2000/01/rdf-schema#\"", "owl=\"http://www.w3.org/2002/07/owl#\"", "swrl=\"http://www.w3.org/2003/11/swrl#\"", "xsd=\"http://www.w3.org/2001/XMLSchema#\"", "base=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/\"", "surgi=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/\"", "surgiVar=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#\"", "surgiProp=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A\"", "surgiCat=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A\""));
 	public List<String> allPrefixuris = new ArrayList<String>();
 
 	public List<String> totalVariablesBank = new ArrayList<String>();
@@ -134,7 +134,7 @@ public class N3_RDF_Mapper7 {
 			writer.println("<?xml version=\"1.0\"?>");
 			
 			//add rule independent prefixes to the result file
-			writer.println("<rdf:RDF xmlns:surgi=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/\" xmlns:surgiVar=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#\" xmlns:surgiProp=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A\" xmlns:owl=\"http://www.w3.org/2002/07/owl#\" xmlns:swrl=\"http://www.w3.org/2003/11/swrl#\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema#\" xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"");
+			writer.println("<rdf:RDF xmlns:base=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/\" xmlns:surgi=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/\" xmlns:surgiVar=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#\" xmlns:surgiProp=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A\" xmlns:surgiCat=\"http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A\" xmlns:owl=\"http://www.w3.org/2002/07/owl#\" xmlns:swrl=\"http://www.w3.org/2003/11/swrl#\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema#\" xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"");
 
 			//add rule dependent prefixes into the result file
 			for (int i=0; i < internPrefixuris.size(); i++) {
@@ -162,8 +162,8 @@ public class N3_RDF_Mapper7 {
 			// Rule URI declaration
 			writer.println("<rdf:Description rdf:about=\"" + base + ruleName + "\">");
 			writer.println("  <rdf:type rdf:resource=\"" + base + "/Category-3AGuidelineRule\"/>");
-			writer.println("  <base:Property-3AHas_N3RuleFile rdf:resource=\"" + ruleN3file + "\"/>");
-			writer.println("  <base:Property-3AHas_SWRLRuleFile rdf:resource=\"" + ruleSWRLfile + "\"/>");
+			writer.println("  <surgiProp:Has_N3RuleFile rdf:resource=\"" + ruleN3file + "\"/>");
+			writer.println("  <surgiProp:Has_SWRLRuleFile rdf:resource=\"" + ruleSWRLfile + "\"/>");
 			writer.println("</rdf:Description>");
 			
 			writer.println("<!-- ");

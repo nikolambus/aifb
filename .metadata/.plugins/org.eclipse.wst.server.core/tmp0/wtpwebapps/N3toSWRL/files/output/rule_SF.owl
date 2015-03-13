@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns:base="http://localhost/mediawiki/index.php/Special:URIResolver/" xmlns:baseVar="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#" xmlns:baseProp="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3A" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors#" xmlns:xnatpatient="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors/Patient#" xmlns:surgi="http://surgipedia.sfb125.de/wiki/Special:URIResolver/" xmlns:surgiProp="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A" xmlns:surgiCat="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A" xmlns:baseCat="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3A" xmlns:log="http://www.w3.org/2000/10/swap/log#" xmlns:math="http://www.w3.org/2000/10/swap/math#" xmlns:time="http://www.w3.org/2000/10/swap/time#" xmlns:string="http://www.w3.org/2000/10/swap/string#" >
+<rdf:RDF xmlns:base="http://surgipedia.sfb125.de/wiki/Special:URIResolver/" xmlns:surgi="http://surgipedia.sfb125.de/wiki/Special:URIResolver/" xmlns:surgiVar="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#" xmlns:surgiProp="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A" xmlns:surgiCat="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:swrl="http://www.w3.org/2003/11/swrl#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors#" xmlns:xnatpatient="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors/Patient#" xmlns:log="http://www.w3.org/2000/10/swap/log#" xmlns:math="http://www.w3.org/2000/10/swap/math#" xmlns:time="http://www.w3.org/2000/10/swap/time#" xmlns:string="http://www.w3.org/2000/10/swap/string#" >
 
 <!-- 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -11,10 +11,10 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
 -->
 
 
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF">
-  <rdf:type rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver//Category-3AGuidelineRule"/>
-  <base:Property-3AHas_N3RuleFile rdf:resource="http://localhost:8080/N3toSWRL/files/input/rule_SF.n3"/>
-  <base:Property-3AHas_SWRLRuleFile rdf:resource="http://localhost:8080/CognitiveApp6/files/output/rule_SF.owl"/>
+<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF">
+  <rdf:type rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver//Category-3AGuidelineRule"/>
+  <surgiProp:Has_N3RuleFile rdf:resource="http://localhost:8080/N3toSWRL/files/input/rule_SF.n3"/>
+  <surgiProp:Has_SWRLRuleFile rdf:resource="http://aifb-ls3-vm2.aifb.kit.edu:8080/N3toSWRL/files/output/rule_SF.owl"/>
 </rdf:Description>
 <!-- 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -25,23 +25,23 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
 -->
 
 
- <!-- http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AHas_name -->
- <owl:AnnotationProperty rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AHas_name"/>
+ <!-- http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AHas_name -->
+ <owl:AnnotationProperty rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AHas_name"/>
 
- <!-- http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AHas_SWRLRuleFile -->
- <owl:AnnotationProperty rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AHas_SWRLRuleFile"/>
+ <!-- http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AHas_SWRLRuleFile -->
+ <owl:AnnotationProperty rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AHas_SWRLRuleFile"/>
 
- <!-- http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AHas_N3RuleFile -->
- <owl:AnnotationProperty rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AHas_N3RuleFile"/>
+ <!-- http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AHas_N3RuleFile -->
+ <owl:AnnotationProperty rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AHas_N3RuleFile"/>
 
- <!-- http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AHas_topic -->
- <owl:AnnotationProperty rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AHas_topic"/>
+ <!-- http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AHas_topic -->
+ <owl:AnnotationProperty rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AHas_topic"/>
 
- <!-- http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AIs_premise_of -->
- <owl:AnnotationProperty rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AIs_premise_of"/>
+ <!-- http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AIs_premise_of -->
+ <owl:AnnotationProperty rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AIs_premise_of"/>
 
- <!-- http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AIs_conclusion_of -->
- <owl:AnnotationProperty rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AIs_conclusion_of"/>
+ <!-- http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AIs_conclusion_of -->
+ <owl:AnnotationProperty rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AIs_conclusion_of"/>
     
 
 <!-- 
@@ -53,18 +53,6 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
 -->
 
 
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/NumberOfTumors">
-  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/MaxTumorSize">
-  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/SF_criteria">
-  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-</rdf:Description>
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/TotalTumorSize">
-  <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-</rdf:Description>
 
 <!-- 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -75,74 +63,73 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
 -->
 
 
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1">
+<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
 </rdf:Description>
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p">
+<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
 </rdf:Description>
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not">
+<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
 </rdf:Description>
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2">
+<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
 </rdf:Description>
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#mts">
+<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#mts">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
 </rdf:Description>
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o3">
+<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o3">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
 </rdf:Description>
-<rdf:Description rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#tts">
+<rdf:Description rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#tts">
   <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
 </rdf:Description>
 
 
 
 
- <swrl:Imp rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1">
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/NumberOfTumors"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/MaxTumorSize"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/SF_criteria"/>
-    <base:Property-3AHas_name rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF"/>
+ <swrl:Imp rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1">
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/NumberOfTumors"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/MaxTumorSize"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/SF_criteria"/>
+    <surgiProp:Has_name rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF"/>
     <swrl:body>
         <swrl:AtomList>
             <rdf:first>
                <swrl:ClassAtom>
-                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                </swrl:ClassAtom>
             </rdf:first>
             <rdf:rest>
                 <swrl:AtomList>
                     <rdf:first>
-                       <swrl:IndividualPropertyAtom>
-                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                       </swrl:IndividualPropertyAtom>
+                       <swrl:DatavaluedPropertyAtom>
+                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                       </swrl:DatavaluedPropertyAtom>
                     </rdf:first>
                     <rdf:rest>
                         <swrl:AtomList>
                             <rdf:first>
-                               <swrl:IndividualPropertyAtom>
-                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/NumberOfTumors"/>
-                               </swrl:IndividualPropertyAtom>
+                               <swrl:DatavaluedPropertyAtom>
+                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                               </swrl:DatavaluedPropertyAtom>
                             </rdf:first>
                             <rdf:rest>
                                 <swrl:AtomList>
                                     <rdf:first>
                                        <swrl:DatavaluedPropertyAtom>
-                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
-                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
+                                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                        </swrl:DatavaluedPropertyAtom>
                                     </rdf:first>
                                     <rdf:rest>
@@ -151,11 +138,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                <rdf:Description>
                                                	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
-                                               	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
+                                               	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
                                                	<swrl:arguments>
                                                		<rdf:Description>
                                                			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                               			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                               			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                                			<rdf:rest>
                                                				<rdf:Description>
                                                					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -171,39 +158,38 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                 <swrl:AtomList>
                                                     <rdf:first>
                                                        <swrl:ClassAtom>
-                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                         <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                         <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                                                        </swrl:ClassAtom>
                                                     </rdf:first>
                                                     <rdf:rest>
                                                         <swrl:AtomList>
                                                             <rdf:first>
-                                                               <swrl:IndividualPropertyAtom>
-                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                                                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                                                               </swrl:IndividualPropertyAtom>
+                                                               <swrl:DatavaluedPropertyAtom>
+                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                                                                 <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                                                               </swrl:DatavaluedPropertyAtom>
                                                             </rdf:first>
                                                             <rdf:rest>
                                                                 <swrl:AtomList>
                                                                     <rdf:first>
-                                                                       <swrl:IndividualPropertyAtom>
-                                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/MaxTumorSize"/>
-                                                                       </swrl:IndividualPropertyAtom>
+                                                                       <swrl:DatavaluedPropertyAtom>
+                                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                                                                       </swrl:DatavaluedPropertyAtom>
                                                                     </rdf:first>
                                                                     <rdf:rest>
                                                                         <swrl:AtomList>
                                                                             <rdf:first>
                                                                                <swrl:DatavaluedPropertyAtom>
-                                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
-                                                                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#mts"/>
+                                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
+                                                                                 <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#mts"/>
                                                                                </swrl:DatavaluedPropertyAtom>
                                                                             </rdf:first>
                                                                             <rdf:rest>
@@ -212,11 +198,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                                                        <rdf:Description>
                                                                                        	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                                                        	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
-                                                                                       	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
+                                                                                       	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
                                                                                        	<swrl:arguments>
                                                                                        		<rdf:Description>
                                                                                        			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                       			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#mts"/>
+                                                                                       			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#mts"/>
                                                                                        			<rdf:rest>
                                                                                        				<rdf:Description>
                                                                                        					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -253,38 +239,37 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
         <swrl:AtomList>
             <rdf:first>
                <swrl:ClassAtom>
-                 <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                 <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                </swrl:ClassAtom>
             </rdf:first>
             <rdf:rest>
                 <swrl:AtomList>
                     <rdf:first>
-                       <swrl:IndividualPropertyAtom>
-                         <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                       </swrl:IndividualPropertyAtom>
+                       <swrl:DatavaluedPropertyAtom>
+                         <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                       </swrl:DatavaluedPropertyAtom>
                     </rdf:first>
                     <rdf:rest>
                         <swrl:AtomList>
                             <rdf:first>
-                               <swrl:IndividualPropertyAtom>
-                                 <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/SF_criteria"/>
-                               </swrl:IndividualPropertyAtom>
+                               <swrl:DatavaluedPropertyAtom>
+                                 <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                               </swrl:DatavaluedPropertyAtom>
                             </rdf:first>
                             <rdf:rest>
                                 <swrl:AtomList>
                                     <rdf:first>
                                        <swrl:DatavaluedPropertyAtom>
-                                         <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#1"/>
-                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
+                                         <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#1"/>
+                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
                                          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SF_criteria_fulfilled</swrl:argument2>
                                        </swrl:DatavaluedPropertyAtom>
                                     </rdf:first>
@@ -302,50 +287,49 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
 
 
 
- <swrl:Imp rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2">
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/NumberOfTumors"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/MaxTumorSize"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/TotalTumorSize"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/SF_criteria"/>
-    <base:Property-3AHas_name rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF"/>
+ <swrl:Imp rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2">
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/NumberOfTumors"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/MaxTumorSize"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/TotalTumorSize"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/SF_criteria"/>
+    <surgiProp:Has_name rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF"/>
     <swrl:body>
         <swrl:AtomList>
             <rdf:first>
                <swrl:ClassAtom>
-                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                </swrl:ClassAtom>
             </rdf:first>
             <rdf:rest>
                 <swrl:AtomList>
                     <rdf:first>
-                       <swrl:IndividualPropertyAtom>
-                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                       </swrl:IndividualPropertyAtom>
+                       <swrl:DatavaluedPropertyAtom>
+                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                       </swrl:DatavaluedPropertyAtom>
                     </rdf:first>
                     <rdf:rest>
                         <swrl:AtomList>
                             <rdf:first>
-                               <swrl:IndividualPropertyAtom>
-                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/NumberOfTumors"/>
-                               </swrl:IndividualPropertyAtom>
+                               <swrl:DatavaluedPropertyAtom>
+                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                               </swrl:DatavaluedPropertyAtom>
                             </rdf:first>
                             <rdf:rest>
                                 <swrl:AtomList>
                                     <rdf:first>
                                        <swrl:DatavaluedPropertyAtom>
-                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
-                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
+                                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                        </swrl:DatavaluedPropertyAtom>
                                     </rdf:first>
                                     <rdf:rest>
@@ -354,11 +338,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                <rdf:Description>
                                                	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
-                                               	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
+                                               	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
                                                	<swrl:arguments>
                                                		<rdf:Description>
                                                			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                               			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                               			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                                			<rdf:rest>
                                                				<rdf:Description>
                                                					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -376,11 +360,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                        <rdf:Description>
                                                        	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                        	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
-                                                       	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
+                                                       	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
                                                        	<swrl:arguments>
                                                        		<rdf:Description>
                                                        			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                       			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                                       			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                                        			<rdf:rest>
                                                        				<rdf:Description>
                                                        					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -396,39 +380,38 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                         <swrl:AtomList>
                                                             <rdf:first>
                                                                <swrl:ClassAtom>
-                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                                                                </swrl:ClassAtom>
                                                             </rdf:first>
                                                             <rdf:rest>
                                                                 <swrl:AtomList>
                                                                     <rdf:first>
-                                                                       <swrl:IndividualPropertyAtom>
-                                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                                                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                                                                       </swrl:IndividualPropertyAtom>
+                                                                       <swrl:DatavaluedPropertyAtom>
+                                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                                                                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                                                                       </swrl:DatavaluedPropertyAtom>
                                                                     </rdf:first>
                                                                     <rdf:rest>
                                                                         <swrl:AtomList>
                                                                             <rdf:first>
-                                                                               <swrl:IndividualPropertyAtom>
-                                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                                                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/MaxTumorSize"/>
-                                                                               </swrl:IndividualPropertyAtom>
+                                                                               <swrl:DatavaluedPropertyAtom>
+                                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                                                                               </swrl:DatavaluedPropertyAtom>
                                                                             </rdf:first>
                                                                             <rdf:rest>
                                                                                 <swrl:AtomList>
                                                                                     <rdf:first>
                                                                                        <swrl:DatavaluedPropertyAtom>
-                                                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
-                                                                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#mts"/>
+                                                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
+                                                                                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#mts"/>
                                                                                        </swrl:DatavaluedPropertyAtom>
                                                                                     </rdf:first>
                                                                                     <rdf:rest>
@@ -437,11 +420,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                                                                <rdf:Description>
                                                                                                	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                                                                	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
-                                                                                               	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
+                                                                                               	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
                                                                                                	<swrl:arguments>
                                                                                                		<rdf:Description>
                                                                                                			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                               			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#mts"/>
+                                                                                               			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#mts"/>
                                                                                                			<rdf:rest>
                                                                                                				<rdf:Description>
                                                                                                					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -457,39 +440,38 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                                                                 <swrl:AtomList>
                                                                                                     <rdf:first>
                                                                                                        <swrl:ClassAtom>
-                                                                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                                                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o3"/>
-                                                                                                         <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                                                                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                                                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o3"/>
+                                                                                                         <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                                                                                                        </swrl:ClassAtom>
                                                                                                     </rdf:first>
                                                                                                     <rdf:rest>
                                                                                                         <swrl:AtomList>
                                                                                                             <rdf:first>
-                                                                                                               <swrl:IndividualPropertyAtom>
-                                                                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                                                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o3"/>
-                                                                                                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                                                                                                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                                                                                                               </swrl:IndividualPropertyAtom>
+                                                                                                               <swrl:DatavaluedPropertyAtom>
+                                                                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                                                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o3"/>
+                                                                                                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                                                                                                                 <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                                                                                                               </swrl:DatavaluedPropertyAtom>
                                                                                                             </rdf:first>
                                                                                                             <rdf:rest>
                                                                                                                 <swrl:AtomList>
                                                                                                                     <rdf:first>
-                                                                                                                       <swrl:IndividualPropertyAtom>
-                                                                                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                                                                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o3"/>
-                                                                                                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                                                                                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/TotalTumorSize"/>
-                                                                                                                       </swrl:IndividualPropertyAtom>
+                                                                                                                       <swrl:DatavaluedPropertyAtom>
+                                                                                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                                                                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o3"/>
+                                                                                                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                                                                                                                       </swrl:DatavaluedPropertyAtom>
                                                                                                                     </rdf:first>
                                                                                                                     <rdf:rest>
                                                                                                                         <swrl:AtomList>
                                                                                                                             <rdf:first>
                                                                                                                                <swrl:DatavaluedPropertyAtom>
-                                                                                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                                                                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o3"/>
-                                                                                                                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
-                                                                                                                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#tts"/>
+                                                                                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                                                                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o3"/>
+                                                                                                                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
+                                                                                                                                 <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#tts"/>
                                                                                                                                </swrl:DatavaluedPropertyAtom>
                                                                                                                             </rdf:first>
                                                                                                                             <rdf:rest>
@@ -498,11 +480,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                                                                                                        <rdf:Description>
                                                                                                                                        	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                                                                                                        	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
-                                                                                                                                       	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
+                                                                                                                                       	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
                                                                                                                                        	<swrl:arguments>
                                                                                                                                        		<rdf:Description>
                                                                                                                                        			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                                                       			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#tts"/>
+                                                                                                                                       			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#tts"/>
                                                                                                                                        			<rdf:rest>
                                                                                                                                        				<rdf:Description>
                                                                                                                                        					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -551,38 +533,37 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
         <swrl:AtomList>
             <rdf:first>
                <swrl:ClassAtom>
-                 <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                 <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                </swrl:ClassAtom>
             </rdf:first>
             <rdf:rest>
                 <swrl:AtomList>
                     <rdf:first>
-                       <swrl:IndividualPropertyAtom>
-                         <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                       </swrl:IndividualPropertyAtom>
+                       <swrl:DatavaluedPropertyAtom>
+                         <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                       </swrl:DatavaluedPropertyAtom>
                     </rdf:first>
                     <rdf:rest>
                         <swrl:AtomList>
                             <rdf:first>
-                               <swrl:IndividualPropertyAtom>
-                                 <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/SF_criteria"/>
-                               </swrl:IndividualPropertyAtom>
+                               <swrl:DatavaluedPropertyAtom>
+                                 <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                               </swrl:DatavaluedPropertyAtom>
                             </rdf:first>
                             <rdf:rest>
                                 <swrl:AtomList>
                                     <rdf:first>
                                        <swrl:DatavaluedPropertyAtom>
-                                         <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#2"/>
-                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
+                                         <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#2"/>
+                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
                                          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SF_criteria_fulfilled</swrl:argument2>
                                        </swrl:DatavaluedPropertyAtom>
                                     </rdf:first>
@@ -600,48 +581,47 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
 
 
 
- <swrl:Imp rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#3">
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/NumberOfTumors"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/SF_criteria"/>
-    <base:Property-3AHas_name rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF"/>
+ <swrl:Imp rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#3">
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/NumberOfTumors"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/SF_criteria"/>
+    <surgiProp:Has_name rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF"/>
     <swrl:body>
         <swrl:AtomList>
             <rdf:first>
                <swrl:ClassAtom>
-                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#3"/>
-                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#3"/>
+                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                </swrl:ClassAtom>
             </rdf:first>
             <rdf:rest>
                 <swrl:AtomList>
                     <rdf:first>
-                       <swrl:IndividualPropertyAtom>
-                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#3"/>
-                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                       </swrl:IndividualPropertyAtom>
+                       <swrl:DatavaluedPropertyAtom>
+                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#3"/>
+                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                       </swrl:DatavaluedPropertyAtom>
                     </rdf:first>
                     <rdf:rest>
                         <swrl:AtomList>
                             <rdf:first>
-                               <swrl:IndividualPropertyAtom>
-                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#3"/>
-                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/NumberOfTumors"/>
-                               </swrl:IndividualPropertyAtom>
+                               <swrl:DatavaluedPropertyAtom>
+                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#3"/>
+                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                               </swrl:DatavaluedPropertyAtom>
                             </rdf:first>
                             <rdf:rest>
                                 <swrl:AtomList>
                                     <rdf:first>
                                        <swrl:DatavaluedPropertyAtom>
-                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#3"/>
-                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
-                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#3"/>
+                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
+                                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                        </swrl:DatavaluedPropertyAtom>
                                     </rdf:first>
                                     <rdf:rest>
@@ -650,11 +630,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                <rdf:Description>
                                                	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
-                                               	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#3"/>
+                                               	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#3"/>
                                                	<swrl:arguments>
                                                		<rdf:Description>
                                                			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                               			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                               			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                                			<rdf:rest>
                                                				<rdf:Description>
                                                					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -681,38 +661,37 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
         <swrl:AtomList>
             <rdf:first>
                <swrl:ClassAtom>
-                 <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#3"/>
-                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                 <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#3"/>
+                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                </swrl:ClassAtom>
             </rdf:first>
             <rdf:rest>
                 <swrl:AtomList>
                     <rdf:first>
-                       <swrl:IndividualPropertyAtom>
-                         <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#3"/>
-                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                       </swrl:IndividualPropertyAtom>
+                       <swrl:DatavaluedPropertyAtom>
+                         <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#3"/>
+                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                       </swrl:DatavaluedPropertyAtom>
                     </rdf:first>
                     <rdf:rest>
                         <swrl:AtomList>
                             <rdf:first>
-                               <swrl:IndividualPropertyAtom>
-                                 <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#3"/>
-                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/SF_criteria"/>
-                               </swrl:IndividualPropertyAtom>
+                               <swrl:DatavaluedPropertyAtom>
+                                 <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#3"/>
+                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                               </swrl:DatavaluedPropertyAtom>
                             </rdf:first>
                             <rdf:rest>
                                 <swrl:AtomList>
                                     <rdf:first>
                                        <swrl:DatavaluedPropertyAtom>
-                                         <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#3"/>
-                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
+                                         <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#3"/>
+                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
                                          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SF_criteria_not_fulfilled</swrl:argument2>
                                        </swrl:DatavaluedPropertyAtom>
                                     </rdf:first>
@@ -730,49 +709,48 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
 
 
 
- <swrl:Imp rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4">
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/NumberOfTumors"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/MaxTumorSize"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/SF_criteria"/>
-    <base:Property-3AHas_name rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF"/>
+ <swrl:Imp rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4">
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/NumberOfTumors"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/MaxTumorSize"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/SF_criteria"/>
+    <surgiProp:Has_name rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF"/>
     <swrl:body>
         <swrl:AtomList>
             <rdf:first>
                <swrl:ClassAtom>
-                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                </swrl:ClassAtom>
             </rdf:first>
             <rdf:rest>
                 <swrl:AtomList>
                     <rdf:first>
-                       <swrl:IndividualPropertyAtom>
-                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                       </swrl:IndividualPropertyAtom>
+                       <swrl:DatavaluedPropertyAtom>
+                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                       </swrl:DatavaluedPropertyAtom>
                     </rdf:first>
                     <rdf:rest>
                         <swrl:AtomList>
                             <rdf:first>
-                               <swrl:IndividualPropertyAtom>
-                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/NumberOfTumors"/>
-                               </swrl:IndividualPropertyAtom>
+                               <swrl:DatavaluedPropertyAtom>
+                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                               </swrl:DatavaluedPropertyAtom>
                             </rdf:first>
                             <rdf:rest>
                                 <swrl:AtomList>
                                     <rdf:first>
                                        <swrl:DatavaluedPropertyAtom>
-                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
-                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
+                                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                        </swrl:DatavaluedPropertyAtom>
                                     </rdf:first>
                                     <rdf:rest>
@@ -781,11 +759,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                <rdf:Description>
                                                	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
-                                               	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
+                                               	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
                                                	<swrl:arguments>
                                                		<rdf:Description>
                                                			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                               			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                               			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                                			<rdf:rest>
                                                				<rdf:Description>
                                                					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -803,11 +781,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                        <rdf:Description>
                                                        	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                        	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
-                                                       	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
+                                                       	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
                                                        	<swrl:arguments>
                                                        		<rdf:Description>
                                                        			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                       			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                                       			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                                        			<rdf:rest>
                                                        				<rdf:Description>
                                                        					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -823,39 +801,38 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                         <swrl:AtomList>
                                                             <rdf:first>
                                                                <swrl:ClassAtom>
-                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                                                                </swrl:ClassAtom>
                                                             </rdf:first>
                                                             <rdf:rest>
                                                                 <swrl:AtomList>
                                                                     <rdf:first>
-                                                                       <swrl:IndividualPropertyAtom>
-                                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                                                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                                                                       </swrl:IndividualPropertyAtom>
+                                                                       <swrl:DatavaluedPropertyAtom>
+                                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                                                                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                                                                       </swrl:DatavaluedPropertyAtom>
                                                                     </rdf:first>
                                                                     <rdf:rest>
                                                                         <swrl:AtomList>
                                                                             <rdf:first>
-                                                                               <swrl:IndividualPropertyAtom>
-                                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                                                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/MaxTumorSize"/>
-                                                                               </swrl:IndividualPropertyAtom>
+                                                                               <swrl:DatavaluedPropertyAtom>
+                                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                                                                               </swrl:DatavaluedPropertyAtom>
                                                                             </rdf:first>
                                                                             <rdf:rest>
                                                                                 <swrl:AtomList>
                                                                                     <rdf:first>
                                                                                        <swrl:DatavaluedPropertyAtom>
-                                                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                                                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
-                                                                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#mts"/>
+                                                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                                                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
+                                                                                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#mts"/>
                                                                                        </swrl:DatavaluedPropertyAtom>
                                                                                     </rdf:first>
                                                                                     <rdf:rest>
@@ -864,11 +841,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                                                                <rdf:Description>
                                                                                                	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                                                                	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
-                                                                                               	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
+                                                                                               	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
                                                                                                	<swrl:arguments>
                                                                                                		<rdf:Description>
                                                                                                			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                               			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#mts"/>
+                                                                                               			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#mts"/>
                                                                                                			<rdf:rest>
                                                                                                				<rdf:Description>
                                                                                                					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -907,38 +884,37 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
         <swrl:AtomList>
             <rdf:first>
                <swrl:ClassAtom>
-                 <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                 <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                </swrl:ClassAtom>
             </rdf:first>
             <rdf:rest>
                 <swrl:AtomList>
                     <rdf:first>
-                       <swrl:IndividualPropertyAtom>
-                         <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                       </swrl:IndividualPropertyAtom>
+                       <swrl:DatavaluedPropertyAtom>
+                         <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                       </swrl:DatavaluedPropertyAtom>
                     </rdf:first>
                     <rdf:rest>
                         <swrl:AtomList>
                             <rdf:first>
-                               <swrl:IndividualPropertyAtom>
-                                 <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/SF_criteria"/>
-                               </swrl:IndividualPropertyAtom>
+                               <swrl:DatavaluedPropertyAtom>
+                                 <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                               </swrl:DatavaluedPropertyAtom>
                             </rdf:first>
                             <rdf:rest>
                                 <swrl:AtomList>
                                     <rdf:first>
                                        <swrl:DatavaluedPropertyAtom>
-                                         <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#4"/>
-                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
+                                         <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#4"/>
+                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
                                          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SF_criteria_not_fulfilled</swrl:argument2>
                                        </swrl:DatavaluedPropertyAtom>
                                     </rdf:first>
@@ -956,50 +932,49 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
 
 
 
- <swrl:Imp rdf:about="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5">
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/NumberOfTumors"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/MaxTumorSize"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/TotalTumorSize"/>
-    <base:Property-3AHas_topic rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/SF_criteria"/>
-    <base:Property-3AHas_name rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF"/>
+ <swrl:Imp rdf:about="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5">
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/NumberOfTumors"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/MaxTumorSize"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/TotalTumorSize"/>
+    <surgiProp:Has_topic rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/SF_criteria"/>
+    <surgiProp:Has_name rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF"/>
     <swrl:body>
         <swrl:AtomList>
             <rdf:first>
                <swrl:ClassAtom>
-                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                </swrl:ClassAtom>
             </rdf:first>
             <rdf:rest>
                 <swrl:AtomList>
                     <rdf:first>
-                       <swrl:IndividualPropertyAtom>
-                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                       </swrl:IndividualPropertyAtom>
+                       <swrl:DatavaluedPropertyAtom>
+                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                       </swrl:DatavaluedPropertyAtom>
                     </rdf:first>
                     <rdf:rest>
                         <swrl:AtomList>
                             <rdf:first>
-                               <swrl:IndividualPropertyAtom>
-                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/NumberOfTumors"/>
-                               </swrl:IndividualPropertyAtom>
+                               <swrl:DatavaluedPropertyAtom>
+                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                               </swrl:DatavaluedPropertyAtom>
                             </rdf:first>
                             <rdf:rest>
                                 <swrl:AtomList>
                                     <rdf:first>
                                        <swrl:DatavaluedPropertyAtom>
-                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o1"/>
-                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
-                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o1"/>
+                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
+                                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                        </swrl:DatavaluedPropertyAtom>
                                     </rdf:first>
                                     <rdf:rest>
@@ -1008,11 +983,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                <rdf:Description>
                                                	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
-                                               	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
+                                               	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
                                                	<swrl:arguments>
                                                		<rdf:Description>
                                                			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                               			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                               			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                                			<rdf:rest>
                                                				<rdf:Description>
                                                					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -1030,11 +1005,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                        <rdf:Description>
                                                        	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                        	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
-                                                       	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
+                                                       	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
                                                        	<swrl:arguments>
                                                        		<rdf:Description>
                                                        			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                       			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#not"/>
+                                                       			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#not"/>
                                                        			<rdf:rest>
                                                        				<rdf:Description>
                                                        					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -1050,39 +1025,38 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                         <swrl:AtomList>
                                                             <rdf:first>
                                                                <swrl:ClassAtom>
-                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                                                                </swrl:ClassAtom>
                                                             </rdf:first>
                                                             <rdf:rest>
                                                                 <swrl:AtomList>
                                                                     <rdf:first>
-                                                                       <swrl:IndividualPropertyAtom>
-                                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                                                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                                                                       </swrl:IndividualPropertyAtom>
+                                                                       <swrl:DatavaluedPropertyAtom>
+                                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                                                                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                                                                       </swrl:DatavaluedPropertyAtom>
                                                                     </rdf:first>
                                                                     <rdf:rest>
                                                                         <swrl:AtomList>
                                                                             <rdf:first>
-                                                                               <swrl:IndividualPropertyAtom>
-                                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                                                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/MaxTumorSize"/>
-                                                                               </swrl:IndividualPropertyAtom>
+                                                                               <swrl:DatavaluedPropertyAtom>
+                                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                                                                               </swrl:DatavaluedPropertyAtom>
                                                                             </rdf:first>
                                                                             <rdf:rest>
                                                                                 <swrl:AtomList>
                                                                                     <rdf:first>
                                                                                        <swrl:DatavaluedPropertyAtom>
-                                                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o2"/>
-                                                                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
-                                                                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#mts"/>
+                                                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o2"/>
+                                                                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
+                                                                                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#mts"/>
                                                                                        </swrl:DatavaluedPropertyAtom>
                                                                                     </rdf:first>
                                                                                     <rdf:rest>
@@ -1091,11 +1065,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                                                                <rdf:Description>
                                                                                                	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                                                                	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
-                                                                                               	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
+                                                                                               	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
                                                                                                	<swrl:arguments>
                                                                                                		<rdf:Description>
                                                                                                			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                               			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#mts"/>
+                                                                                               			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#mts"/>
                                                                                                			<rdf:rest>
                                                                                                				<rdf:Description>
                                                                                                					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -1111,39 +1085,38 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                                                                 <swrl:AtomList>
                                                                                                     <rdf:first>
                                                                                                        <swrl:ClassAtom>
-                                                                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                                                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o3"/>
-                                                                                                         <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                                                                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                                                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o3"/>
+                                                                                                         <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                                                                                                        </swrl:ClassAtom>
                                                                                                     </rdf:first>
                                                                                                     <rdf:rest>
                                                                                                         <swrl:AtomList>
                                                                                                             <rdf:first>
-                                                                                                               <swrl:IndividualPropertyAtom>
-                                                                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                                                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o3"/>
-                                                                                                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                                                                                                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                                                                                                               </swrl:IndividualPropertyAtom>
+                                                                                                               <swrl:DatavaluedPropertyAtom>
+                                                                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                                                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o3"/>
+                                                                                                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                                                                                                                 <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                                                                                                               </swrl:DatavaluedPropertyAtom>
                                                                                                             </rdf:first>
                                                                                                             <rdf:rest>
                                                                                                                 <swrl:AtomList>
                                                                                                                     <rdf:first>
-                                                                                                                       <swrl:IndividualPropertyAtom>
-                                                                                                                         <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                                                                                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o3"/>
-                                                                                                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                                                                                                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/TotalTumorSize"/>
-                                                                                                                       </swrl:IndividualPropertyAtom>
+                                                                                                                       <swrl:DatavaluedPropertyAtom>
+                                                                                                                         <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                                                                                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o3"/>
+                                                                                                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                                                                                                                       </swrl:DatavaluedPropertyAtom>
                                                                                                                     </rdf:first>
                                                                                                                     <rdf:rest>
                                                                                                                         <swrl:AtomList>
                                                                                                                             <rdf:first>
                                                                                                                                <swrl:DatavaluedPropertyAtom>
-                                                                                                                                 <base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                                                                                                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#o3"/>
-                                                                                                                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
-                                                                                                                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#tts"/>
+                                                                                                                                 <surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                                                                                                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#o3"/>
+                                                                                                                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
+                                                                                                                                 <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#tts"/>
                                                                                                                                </swrl:DatavaluedPropertyAtom>
                                                                                                                             </rdf:first>
                                                                                                                             <rdf:rest>
@@ -1152,11 +1125,11 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
                                                                                                                                        <rdf:Description>
                                                                                                                                        	<rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
                                                                                                                                        	<swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
-                                                                                                                                       	<base:Property-3AIs_premise_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
+                                                                                                                                       	<surgiProp:Is_premise_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
                                                                                                                                        	<swrl:arguments>
                                                                                                                                        		<rdf:Description>
                                                                                                                                        			<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-                                                                                                                                       			<rdf:first rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#tts"/>
+                                                                                                                                       			<rdf:first rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#tts"/>
                                                                                                                                        			<rdf:rest>
                                                                                                                                        				<rdf:Description>
                                                                                                                                        					<rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
@@ -1205,38 +1178,37 @@ xmlns:xnat="http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_F
         <swrl:AtomList>
             <rdf:first>
                <swrl:ClassAtom>
-                 <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                 <swrl:classPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Category-3AObservation"/>
+                 <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                 <swrl:classPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3AObservation"/>
                </swrl:ClassAtom>
             </rdf:first>
             <rdf:rest>
                 <swrl:AtomList>
                     <rdf:first>
-                       <swrl:IndividualPropertyAtom>
-                         <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasPatient"/>
-                         <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Variable#p"/>
-                       </swrl:IndividualPropertyAtom>
+                       <swrl:DatavaluedPropertyAtom>
+                         <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasPatient"/>
+                         <swrl:argument2 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Variable#p"/>
+                       </swrl:DatavaluedPropertyAtom>
                     </rdf:first>
                     <rdf:rest>
                         <swrl:AtomList>
                             <rdf:first>
-                               <swrl:IndividualPropertyAtom>
-                                 <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                 <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                                 <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasFactor"/>
-                                 <swrl:argument2 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/SF_criteria"/>
-                               </swrl:IndividualPropertyAtom>
+                               <swrl:DatavaluedPropertyAtom>
+                                 <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                 <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                                 <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasFactor"/>
+                               </swrl:DatavaluedPropertyAtom>
                             </rdf:first>
                             <rdf:rest>
                                 <swrl:AtomList>
                                     <rdf:first>
                                        <swrl:DatavaluedPropertyAtom>
-                                         <base:Property-3AIs_conclusion_of rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/rule_SF#5"/>
-                                         <swrl:argument1 rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Individual#SFbnode"/>
-                                         <swrl:propertyPredicate rdf:resource="http://localhost/mediawiki/index.php/Special:URIResolver/Property-3AhasObsValue"/>
+                                         <surgiProp:Is_conclusion_of rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/rule_SF#5"/>
+                                         <swrl:argument1 rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Individual#SFbnode"/>
+                                         <swrl:propertyPredicate rdf:resource="http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3AhasObsValue"/>
                                          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SF_criteria_not_fulfilled</swrl:argument2>
                                        </swrl:DatavaluedPropertyAtom>
                                     </rdf:first>

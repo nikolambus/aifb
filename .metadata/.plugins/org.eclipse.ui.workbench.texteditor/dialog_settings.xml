@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="[" key="selection"/>
+		<item value="sp:" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="["/>
-			<item value="Has_phaseContextFile"/>
-			<item value="http://141.52.218.34:8080/"/>
-			<item value="aifb"/>
-			<item value="141"/>
-			<item value="N3toSWRL"/>
-			<item value="http://141.52.218.34:8080"/>
-			<item value="http://141.52.218.34:"/>
+			<item value="sp:"/>
+			<item value="sp"/>
+			<item value="base:"/>
+			<item value="Has_N3RuleFile"/>
+			<item value="surgiProp:"/>
+			<item value="base"/>
+			<item value="base;"/>
+			<item value="Retre"/>
 		</list>
 		<list key="replacehistory">
 			<item value="http://aifb-ls3-vm2.aifb.kit.edu:8080/"/>
@@ -32,7 +32,7 @@
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="210" key="DIALOG_HEIGHT"/>
-		<item value="935" key="DIALOG_X_ORIGIN"/>
-		<item value="427" key="DIALOG_Y_ORIGIN"/>
+		<item value="989" key="DIALOG_X_ORIGIN"/>
+		<item value="526" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
