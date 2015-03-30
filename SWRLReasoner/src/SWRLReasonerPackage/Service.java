@@ -200,6 +200,13 @@ public class Service {
 				//--------------------------------------------------------------------------------------
 				// this part describes the immediate reasoning 
 
+				/* Attention!! 
+				 * 
+				 * the command below will only create a result file in the Cognitive App output folder:  
+				 * http://aifb-ls3-vm2.aifb.kit.edu:8080/SWRLReasoner/files/output/
+				 * 
+				 * If you would like to save your new patient data file to another location (e.g. XNAT) just assign another path to the variable outputPath    
+				 * */
 				//get the output folder of the Cognitive App via ServletContext method "getRealPath"
 				String outputPath = context.getRealPath("/files/output/") + "\\" + patientName + "_new.owl";
 				

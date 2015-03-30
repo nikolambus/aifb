@@ -12,6 +12,8 @@ import java.io.InputStream;
 
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -52,7 +54,7 @@ public class ReasonerService {
 	@POST
 	@Path("/input")
 	@Consumes("application/rdf+xml")
-	public void postStuff(String rdf, @Context final HttpServletResponse servletResponse, @Context final HttpServletRequest servletRequest, @Context final ServletContext context) throws IOException, SAXException {
+	public void postStuff(String rdf, @Context final HttpServletResponse servletResponse, @Context final HttpServletRequest servletRequest, @Context final ServletContext context) throws IOException, SAXException, InterruptedException {
 		
 		// Our PLAN:
 		/* String rdf is read (via POST from Postman) and has a rdf/xml structure that should satisfy the pattern in Helper.getSparqlInputPattern()
@@ -205,21 +207,64 @@ public class ReasonerService {
 				n3RuleFile = soln2.getResource("n3RuleFile").toString();
 				System.out.println("n3RuleFile: " + n3RuleFile);
 
+				/* Attention!! 
+				 * 
+				 * the command below will only create a result file in the Cognitive App output folder:  
+				 * http://aifb-ls3-vm2.aifb.kit.edu:8080/N3Reasoner/files/output/
+				 * 
+				 * If you would like to save your new patient data file to another location (e.g. XNAT) just assign another path to the variable outputPath    
+				 * */
+				//get the output folder of the Cognitive App via ServletContext method "getRealPath"
+				String outputPath = context.getRealPath("/files/output/") + "/";	
+
 				//--------------------------------------------------------------------------------------
-				// this part describes the immediate reasoning  
+				// this part describes the immediate reasoning for Windows 
+				//--------------------------------------------------------------------------------------
+
+				/*
 				
 				// we'll need the runtime environment to execute cwm commands
 				Runtime rt = Runtime.getRuntime();
-			
-				//get the output folder of the Cognitive App via ServletContext method "getRealPath"
-				String outputPath = context.getRealPath("/files/output/") + "/";
 				
 				// forming the appropriate cwm reasoning command for Windows Command line interpreter (cmd)
 				String cmd = "cmd /C cwm.py " + patient + " --think=" + n3RuleFile + " --n3=qd/ --purge > " + outputPath + patientName + "_new.ttl";
 				System.out.println("reasoning command: " + cmd);
 				
 				//execute it
-				Process proc = rt.exec(cmd);		
+				Process proc = rt.exec(cmd);
+				
+				*/
+				
+				//--------------------------------------------------------------------------------------
+				// this part describes the immediate reasoning for Linux 
+				//--------------------------------------------------------------------------------------
+				
+				//!!!
+				//specify here the path to the cwm reasoner
+				String cwmPath = "/home/niko/Schreibtisch/cwm-1.2.1/cwm";
+
+				//Build command 
+		        List<String> commands = new ArrayList<String>();
+		        //Add arguments
+		        commands.add("/bin/sh");
+		        commands.add("-c");
+		        commands.add("python " + cwmPath + " " + patient + " --think=" + n3RuleFile + " --n3=qd/ --purge > " + outputPath + patientName + "_new.ttl");
+		        System.out.println(commands);
+
+		        //Run command
+		        ProcessBuilder pb = new ProcessBuilder(commands);
+		        pb.redirectErrorStream(true);
+		        Process process = pb.start();
+
+		        //Check result
+		        if (process.waitFor() == 0) {
+		            System.out.println("Success!");
+		            System.exit(0);
+		        }
+
+		        //Abnormal termination: Log command parameters and output and throw ExecutionException
+		        System.err.println(commands);
+		        System.exit(1);				
 			}
 		}
 	}

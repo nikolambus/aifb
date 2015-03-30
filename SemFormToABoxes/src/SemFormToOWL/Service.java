@@ -114,6 +114,13 @@ public class Service {
 			Scanner scanner = new Scanner(new URL(rdfExport).openStream(), "UTF-8").useDelimiter("\\A");
 			String rdfExportText = scanner.next();
 				
+			/* Attention!! 
+			 * 
+			 * the command below will only create a result file in the Cognitive App output folder:  
+			 * http://aifb-ls3-vm2.aifb.kit.edu:8080/SemFormToABoxes/files/output/
+			 * 
+			 * If you would like to save your result file to another location (e.g. XNAT) just assign another path to the variable outputPath    
+			 * */
 			//get the output folder of the Cognitive App via ServletContext method "getRealPath"
 			String outputPath = context.getRealPath("/files/output/") + "/" + ABoxesName + ".owl";
 		

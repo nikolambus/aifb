@@ -12,6 +12,8 @@ import java.io.InputStream;
 
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
@@ -126,24 +128,69 @@ public class ReasonerService {
 					patientName = patientFile;
 			}
 			
+			/* Attention!! 
+			 * 
+			 * the command below will only create a result file in the Cognitive App output folder:  
+			 * http://aifb-ls3-vm2.aifb.kit.edu:8080/N3ReasonerFiles/files/output/
+			 * 
+			 * If you would like to save your new patient data file to another location (e.g. XNAT) just assign another path to the variable outputPath    
+			 * */
+			//get the output folder of the Cognitive App via ServletContext method "getRealPath"
+			String outputPath = context.getRealPath("/files/output/") + "/";
+			
 				//--------------------------------------------------------------------------------------
-				// this part describes the immediate reasoning  
+				// this part describes the immediate reasoning for Windows  
+				//--------------------------------------------------------------------------------------
 
+				/*
+			
 				// we'll need the runtime environment to execute cwm commands
 				Runtime rt = Runtime.getRuntime();
-			
-				//get the output folder of the Cognitive App via ServletContext method "getRealPath"
-				String outputPath = context.getRealPath("/files/output/") + "/";
 				
 				// forming the appropriate cwm reasoning command for Windows Command line interpreter (cmd)
-				String cmd = "cmd /C cwm.py " + patientFile + " --think=" + ruleFile + " --n3=qd/ --purge > " + outputPath + patientName + "_new.ttl";
-				System.out.println("reasoning command: " + cmd);
+				 String cmd = "cmd /C cwm.py " + patientFile + " --think=" + ruleFile + " --n3=qd/ --purge > " + outputPath + patientName + "_new.ttl";
+				 System.out.println("reasoning command: " + cmd); 
 				
 				//execute it
 				Process proc = rt.exec(cmd);		
+				
+				*/
+				
+				//--------------------------------------------------------------------------------------
+				// this part describes the immediate reasoning for Linux 
+				//--------------------------------------------------------------------------------------
 			
+				//!!!
+				//specify here the path to the cwm reasoner
+				String cwmPath = "/home/niko/Schreibtisch/cwm-1.2.1/cwm";
+
+				//Build command 
+		        List<String> commands = new ArrayList<String>();
+		        //Add arguments
+		        commands.add("/bin/sh");
+		        commands.add("-c");
+		        commands.add("python " + cwmPath + " " + patientFile + " --think=" + ruleFile + " --n3=qd/ --purge > " + outputPath + patientName + "_new.ttl");
+		        System.out.println(commands);
+
+		        //Run command
+		        ProcessBuilder pb = new ProcessBuilder(commands);
+		        pb.redirectErrorStream(true);
+		        Process process = pb.start();
+
+		        //Check result
+		        if (process.waitFor() == 0) {
+		            System.out.println("Success!");
+		            System.exit(0);
+		        }
+
+		        //Abnormal termination: Log command parameters and output and throw ExecutionException
+		        System.err.println(commands);
+		        System.exit(1);
+	
+				//--------------------------------------------------------------------------------------
+
 				/* only for the project B01
-				 * wait till cmd and cwm have finished
+				 * wait till the result file is created
 				 * then write the found eligible in a extra file */		
 	        	Thread.sleep(7500);
 				EligibleRingParser parser = new EligibleRingParser();

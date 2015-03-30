@@ -59,7 +59,7 @@ public class ReasonerService {
 	@POST
 	@Path("/input")
 	@Consumes("application/rdf+xml")
-	public void postStuff(String rdf, @Context final HttpServletResponse servletResponse, @Context final HttpServletRequest servletRequest, @Context final ServletContext context) throws IOException, SAXException {
+	public void postStuff(String rdf, @Context final HttpServletResponse servletResponse, @Context final HttpServletRequest servletRequest, @Context final ServletContext context) throws IOException, SAXException, InterruptedException {
 		
 		// Our PLAN:
 		/* String rdf is read (via POST from Postman) and has a rdf/xml structure that should satisfy the pattern in ServiceHelper.getSparqlInputPattern()
@@ -230,19 +230,29 @@ public class ReasonerService {
 				//check
 				System.out.println("There were found following rule files for this topic: " + stringSolutions);
 				
-				//--------------------------------------------------------------------------------------
-				// this part describes the immediate algorithm (in our case - the reasoner)
+				/* Attention!! 
+				 * 
+				 * the command below will only create a result file in the Cognitive App output folder:  
+				 * http://aifb-ls3-vm2.aifb.kit.edu:8080/N3ReasonerTopic/files/output/
+				 * 
+				 * If you would like to save your new patient data file to another location (e.g. XNAT) just assign another path to the variable outputPath    
+				 * */
+				//get the output folder of the Cognitive App via ServletContext method "getRealPath"
+				String outputPath = context.getRealPath("/files/output/") + "/";
 				
+				/*
+				
+				//--------------------------------------------------------------------------------------
+				// this part describes the immediate reasoning for Windows
+				//--------------------------------------------------------------------------------------
+
 				//this variable will store our cwm command
 				String cwmCommand = "cmd /C cwm.py " + patient; 
 				
 				//go through all rule files found by topic and add each rule to the rule command
 	          	for (String rule : stringSolutions) {
 					cwmCommand = cwmCommand + " --think=" + rule + " --purge";
-	          	}
-
-				//get the output folder of the Cognitive App via ServletContext method "getRealPath"
-				String outputPath = context.getRealPath("/files/output/") + "/";	
+	          	}	
 				
 				//complete the reasoning command
 	          	cwmCommand = cwmCommand + " --n3=qd/ --purge > " + outputPath + patientName + "_new.ttl";
@@ -256,7 +266,49 @@ public class ReasonerService {
 				//immediate reasoning
 				Process proc = rt.exec(cwmCommand);
 					
-	          			
+	          	*/
+				
+				//--------------------------------------------------------------------------------------
+				// this part describes the immediate reasoning for Linux
+				//--------------------------------------------------------------------------------------
+				
+				//!!!
+				//specify here the path to the cwm reasoner
+				String cwmPath = "/home/niko/Schreibtisch/cwm-1.2.1/cwm";
+
+
+				//this variable will store our cwm command
+				String cwmCommand = "python " + cwmPath + " " + patient; 
+				
+				//go through all rule files found by topic and add each rule to the rule command
+	          	for (String rule : stringSolutions) {
+					cwmCommand = cwmCommand + " --think=" + rule + " --purge";
+	          	}	
+				
+				
+				//Build command 
+		        List<String> commands = new ArrayList<String>();
+		        //Add arguments
+		        commands.add("/bin/sh");
+		        commands.add("-c");
+		        commands.add(cwmCommand + " --n3=qd/ --purge > " + outputPath + patientName + "_new.ttl");
+		        System.out.println(commands);
+
+		        //Run command
+		        ProcessBuilder pb = new ProcessBuilder(commands);
+		        pb.redirectErrorStream(true);
+		        Process process = pb.start();
+
+		        //Check result
+		        if (process.waitFor() == 0) {
+		            System.out.println("Success!");
+		            System.exit(0);
+		        }
+
+		        //Abnormal termination: Log command parameters and output and throw ExecutionException
+		        System.err.println(commands);
+		        System.exit(1);				
+				
 			}
 		}
 	}

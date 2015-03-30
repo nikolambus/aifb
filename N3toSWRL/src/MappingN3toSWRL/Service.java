@@ -129,6 +129,19 @@ public class Service {
 			// this will be the name of our result RDF/XML file
 			String ruleRDF = ruleName + ".owl";
 			
+			/* Attention!! 
+			 * 
+			 * the command below will only create a result file in the Cognitive App output folder:  
+			 * http://aifb-ls3-vm2.aifb.kit.edu:8080/N3toSWRL/files/output/
+			 * 
+			 * It isn't available for TripleStore Crawler there. 
+			 * So I see following 3 different ways how to get the triples inside of this file into the TripleStore:
+			 * 
+			 * 1) To change the output path to the folder, which will be crawled by TripleStore Crawler (Surgipedia, XNAT)
+			 * 2) To change the settings of the TripleStore Crawler so that it can crawl files from the folders located on the AIFB server (in this particular case: http://aifb-ls3-vm2.aifb.kit.edu:8080/N3toSWRL/files/output/)
+			 * 3) To add the result file into the TripleStore on some other way 
+			 * 
+			 * */
 			//get the output folder of the Cognitive App via ServletContext method "getRealPath"
 			String outputPath = context.getRealPath("/files/output/") + "/" + ruleRDF;
 		
