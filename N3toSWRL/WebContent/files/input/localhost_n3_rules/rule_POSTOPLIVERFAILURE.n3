@@ -1,0 +1,80 @@
+@prefix xnat: <http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors#> .
+@prefix xnatpatient: <http://aifb-ls3-vm2.aifb.kit.edu:8080/xnatwrapper/id/project/Liver_Factors/Patient#> .
+    
+@prefix surgi: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/> .
+@prefix surgiProp: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A> .
+@prefix surgiCat: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A> .
+	
+@prefix base: <http://localhost/mediawiki/index.php/Special:URIResolver/> .
+@prefix baseProp: <http://localhost/mediawiki/index.php/Special:URIResolver/Property-3A> .
+@prefix baseCat: <http://localhost/mediawiki/index.php/Special:URIResolver/Category-3A> .
+    
+@prefix math: <http://www.w3.org/2000/10/swap/math#>.
+@prefix time: <http://www.w3.org/2000/10/swap/time#>.
+@prefix log: <http://www.w3.org/2000/10/swap/log#>.
+@prefix string: <http://www.w3.org/2000/10/swap/string#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+{
+?o1 a baseCat:Observation ; 
+    baseProp:hasPatient ?p ;
+    baseProp:hasFactor base:abnormalLabParameters; 
+    baseProp:hasObsValue "yes" 
+} => {
+	_:PostOPLFObs a baseCat:Observation .
+	_:PostOPLFObs baseProp:hasPatient ?p .
+	_:PostOPLFObs baseProp:hasFactor base:PostOPLiverFailure .
+	_:PostOPLFObs baseProp:hasObsValue "Grade A" .
+} .
+
+{
+?o1 a baseCat:Observation ; 
+    baseProp:hasPatient ?p ;
+    baseProp:hasFactor base:changesInClinicalManagement; 
+    baseProp:hasObsValue "yes" 
+} => {
+	_:PostOPLFObs a baseCat:Observation .
+	_:PostOPLFObs baseProp:hasPatient ?p .
+	_:PostOPLFObs baseProp:hasFactor base:PostOPLiverFailure .
+	_:PostOPLFObs baseProp:hasObsValue "Grade B" .
+} .
+
+{
+?o1 a baseCat:Observation ; 
+    baseProp:hasPatient ?p ;
+    baseProp:hasFactor base:invasiveTreatment; 
+    baseProp:hasObsValue "yes" 
+} => {
+	_:PostOPLFObs a baseCat:Observation .
+	_:PostOPLFObs baseProp:hasPatient ?p .
+	_:PostOPLFObs baseProp:hasFactor base:PostOPLiverFailure .
+	_:PostOPLFObs baseProp:hasObsValue "Grade C" .
+} .
+
+
+{
+ ?o1 baseProp:hasFactor base:PostOPLiverFailure .
+ ?o1 baseProp:hasObsValue "Grade A" .
+ ?o2 baseProp:hasFactor base:PostOPLiverFailure .
+ ?o2 baseProp:hasObsValue "Grade B" 
+} => {
+	?o1 a log:Chaff .
+} .
+
+{
+ ?o1 baseProp:hasFactor base:PostOPLiverFailure .
+ ?o1 baseProp:hasObsValue "Grade A" .
+ ?o2 baseProp:hasFactor base:PostOPLiverFailure .
+ ?o2 baseProp:hasObsValue "Grade C" 
+} => {
+	?o1 a log:Chaff .
+} .
+
+{
+ ?o1 baseProp:hasFactor base:PostOPLiverFailure .
+ ?o1 baseProp:hasObsValue "Grade B" .
+ ?o2 baseProp:hasFactor base:PostOPLiverFailure .
+ ?o2 baseProp:hasObsValue "Grade C" 
+} => {
+	?o1 a log:Chaff .
+} .

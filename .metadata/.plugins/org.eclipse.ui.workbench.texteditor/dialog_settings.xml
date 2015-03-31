@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Attent" key="selection"/>
+		<item value="Scanner" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="Attent"/>
-			<item value="Atten"/>
-			<item value="atten"/>
-			<item value="model"/>
-			<item value="sp:"/>
-			<item value="sp"/>
-			<item value="base:"/>
-			<item value="Has_N3RuleFile"/>
+			<item value="Scanner"/>
+			<item value="S"/>
+			<item value="System"/>
+			<item value="BIBA"/>
+			<item value="WPG"/>
+			<item value="OneRuleMa"/>
+			<item value="System.out.println"/>
+			<item value="python"/>
 		</list>
 		<list key="replacehistory">
 			<item value="http://aifb-ls3-vm2.aifb.kit.edu:8080/"/>

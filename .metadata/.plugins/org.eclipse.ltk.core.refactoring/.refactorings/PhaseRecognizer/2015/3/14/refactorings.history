@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 1 resources to &apos;localhost_result&apos;" description="Move 1 resources to &apos;localhost_result&apos;" destination="WebContent/files/output/localhost_result" element1="WebContent/files/output/ContextPancreas1_new.owl" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1427797327998" updateReferences="true"/>
+</session>

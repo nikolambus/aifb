@@ -1,4 +1,5 @@
 package SemFormToSWRL;
+
 //import Query;
 //import QueryExecution;
 //import QuerySolution;
@@ -78,7 +79,7 @@ public class Service {
 		String querystring = sparql_prefixes + sparql_input_pattern;
 		
 		//check
-		System.out.println("Query:" + querystring);
+		//System.out.println("Query:" + querystring);
 		
 		//Encodes this String into a sequence of bytes
 		InputStream in = new ByteArrayInputStream(rdf.getBytes());
@@ -88,15 +89,9 @@ public class Service {
 		
 	    //Add statements from a document. This method assumes the concrete syntax is RDF/XML
 		model.read(in, "");
-	
-		//check
-		System.out.println("in:" + in);
 		
 		//Close the Model and free up resources held.
 		in.close();
-		
-		//check
-		System.out.println("Model:" + model);
 		
 		QuerySolution soln = ServiceHelper.evaluationOfSPARQLQueryAgainstModel(querystring, model);
 		
@@ -133,11 +128,12 @@ public class Service {
 			String rdfExport =  "http://surgipedia.sfb125.de/wiki/Special:ExportRDF/" + ruleName;
 			
 			//getting the RDF export of the rule's page in SMW
-			Scanner scanner = new Scanner(new URL("http://surgipedia.sfb125.de/wiki/Special:URIResolver/2._SFB-2DRetreat_2013").openStream(), "UTF-8").useDelimiter("\\A");
+			Scanner scanner = new Scanner(new URL(rdfExport).openStream(), "UTF-8").useDelimiter("\\A");
 			String out = scanner.next();
 		
-			System.out.println("OUT:");
-			System.out.println(out);
+			//check
+			//System.out.println("RDF Export of the rule page:");
+			//System.out.println(out);
 			
 			//Wiki rule --> SWRL rule string
 			RDFExportParser parser = new RDFExportParser();

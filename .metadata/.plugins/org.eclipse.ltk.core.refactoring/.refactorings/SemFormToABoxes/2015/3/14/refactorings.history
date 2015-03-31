@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;ContextCCE1.owl&apos; to &apos;localhost_results&apos;" description="Move &apos;ContextCCE1.owl&apos; to &apos;localhost_results&apos;" destination="WebContent/files/output/localhost_results" element1="WebContent/files/output/ContextCCE1.owl" element2="WebContent/files/output/ContextPancreas1.owl" element3="WebContent/files/output/TestPatient1.owl" element4="WebContent/files/output/TestPatient2.owl" element5="WebContent/files/output/TestPatient3.owl" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="5" stamp="1427797490672" updateReferences="true"/>
+</session>

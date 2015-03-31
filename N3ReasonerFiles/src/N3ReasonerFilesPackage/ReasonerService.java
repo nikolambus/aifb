@@ -186,9 +186,9 @@ public class ReasonerService {
 		        //Abnormal termination: Log command parameters and output and throw ExecutionException
 		        System.err.println(commands);
 		        System.exit(1);
-	
+				
 				//--------------------------------------------------------------------------------------
-
+				
 				/* only for the project B01
 				 * wait till the result file is created
 				 * then write the found eligible in a extra file */		

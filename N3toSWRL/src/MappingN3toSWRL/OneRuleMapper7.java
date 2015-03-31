@@ -1230,14 +1230,10 @@ public class OneRuleMapper7 {
 					// For this do activate RegEx multiline modus with (?sm)
 
 					//check
-					System.out.println("BIBA!!!!!!!!!!!!");
-					System.out.println("currentPredicatePage: " + currentPredicatePage);
+					//System.out.println("RDF Export of the current predicate page!!");
+					//System.out.println("currentPredicatePage: " + currentPredicatePage);
 					
 					if (Pattern.matches("(?sm).*^\t\t<swivt:type rdf:resource=\"http://semantic-mediawiki.org/swivt/1.0#_wpg\"/>$.*", currentPredicatePage)) {
-
-						//check
-						System.out.println("WPG!!!!!!!!!!!!");
-						System.out.println("Predicate: " + predicate);
 						
 						//if found - it's an object property
 						//output IndividualPropertyAtom into the result file

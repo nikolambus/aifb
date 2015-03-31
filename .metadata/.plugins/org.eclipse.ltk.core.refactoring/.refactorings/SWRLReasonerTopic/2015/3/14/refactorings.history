@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;TestPatient1_new.owl&apos; to &apos;localhost_results&apos;" description="Move &apos;TestPatient1_new.owl&apos; to &apos;localhost_results&apos;" destination="WebContent/files/output/localhost_results" element1="WebContent/files/output/TestPatient1_new.owl" element2="WebContent/files/output/TestPatient2_new.owl" element3="WebContent/files/output/TestPatient3_new.owl" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="3" stamp="1427797621036" updateReferences="true"/>
+</session>
