@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Scanner" key="selection"/>
+		<item value="ins.cl" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="ins.cl"/>
 			<item value="Scanner"/>
 			<item value="S"/>
 			<item value="System"/>
@@ -15,7 +16,6 @@
 			<item value="WPG"/>
 			<item value="OneRuleMa"/>
 			<item value="System.out.println"/>
-			<item value="python"/>
 		</list>
 		<list key="replacehistory">
 			<item value="http://aifb-ls3-vm2.aifb.kit.edu:8080/"/>

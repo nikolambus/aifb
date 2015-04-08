@@ -1,0 +1,12 @@
+127.0.0.1 - - [03/Apr/2015:11:56:55 +0200] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [03/Apr/2015:12:11:13 +0200] "POST /SemFormToRulePOSTLogin/semafor/input HTTP/1.1" 500 3327
+0:0:0:0:0:0:0:1 - - [03/Apr/2015:12:14:00 +0200] "POST /SemFormToRulePOSTLogin/semafor/input HTTP/1.1" 500 3327
+0:0:0:0:0:0:0:1 - - [03/Apr/2015:12:14:50 +0200] "POST /SemFormToRulePOSTLogin/semafor/input HTTP/1.1" 500 3327
+0:0:0:0:0:0:0:1 - - [03/Apr/2015:12:18:36 +0200] "POST /SemFormToRulePOSTLogin/semafor/input HTTP/1.1" 500 3975
+0:0:0:0:0:0:0:1 - - [03/Apr/2015:12:19:35 +0200] "POST /SemFormToRulePOSTLogin/semafor/input HTTP/1.1" 500 3327
+0:0:0:0:0:0:0:1 - - [03/Apr/2015:12:36:10 +0200] "POST /SemFormToRulePOSTLogin/semafor/input HTTP/1.1" 500 3327
+0:0:0:0:0:0:0:1 - - [03/Apr/2015:12:37:37 +0200] "POST /SemFormToRulePOSTLogin/semafor/input HTTP/1.1" 500 3327
+0:0:0:0:0:0:0:1 - - [03/Apr/2015:12:40:48 +0200] "POST /SemFormToRulePOSTLogin/semafor/input HTTP/1.1" 500 3327
+0:0:0:0:0:0:0:1 - - [03/Apr/2015:12:45:27 +0200] "POST /SemFormToRulePOSTLogin/semafor/input HTTP/1.1" 500 3185
+0:0:0:0:0:0:0:1 - - [03/Apr/2015:12:46:14 +0200] "POST /SemFormToRulePOSTLogin/semafor/input HTTP/1.1" 500 3185
+0:0:0:0:0:0:0:1 - - [03/Apr/2015:12:51:08 +0200] "POST /SemFormToRulePOSTLogin/semafor/input HTTP/1.1" 500 3327
