@@ -12,6 +12,8 @@ import java.util.Properties;
 
 
 
+
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
 
@@ -42,6 +44,7 @@ public class ServiceHelper {
 		namespaceList.add("PREFIX dc: <http://purl.org/dc/elements/1.1/>");
 		namespaceList.add("PREFIX surgiProp: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A>");
 		namespaceList.add("PREFIX surgiCat: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Category-3A>");
+		namespaceList.add("PREFIX swivt: <http://semantic-mediawiki.org/swivt/1.0#>");
 		return namespaceList;
 	}
 
@@ -68,7 +71,50 @@ public class ServiceHelper {
 		return together;
 	}
 	
-	/* this method evaluate given query against given model (RDF tripleStore) and outputs the one(!) found solution */ 
+	/* this method constructs a query which finds (in SFB TripleStore) 
+	 * the type of a property "propertyName" defined in Surgipedia */
+	public static String getPropertyTypeQuery(String propertyName) {
+		String startFrame = "\n" + "SELECT * WHERE { ";
+		String inputPattern = "surgiProp:" + propertyName + " swivt:type ?type .";
+		String endFrame = "}";
+		
+		String together = "\n" + startFrame + "\n" + inputPattern + "\n" + endFrame;
+		return together;
+	}
+	
+	/* this method evaluate given query against web located SPARQL endpoint of a tripleStore and outputs the one(!) found solution */ 
+	public static QuerySolution evaluationOfSPARQLQueryAgainstEndpoint(String queryString, String service) throws Exception {
+        
+		// that will be our result
+		QuerySolution soln = null;
+		
+		// Create a SPARQL query from the given string
+		Query query = QueryFactory.create(queryString);
+        
+		//Create a QueryExecution to execute over the web-based SPARQL endpoint service.
+		QueryExecution qexec = QueryExecutionFactory.sparqlService(service, query);
+        
+		try {
+			
+			// Results from a query in a table-like manner for SELECT queries. Each row corresponds to a set of bindings which fulfill the conditions of the query. Access to the results is by variable name.
+			ResultSet results = qexec.execSelect();
+
+			while(results.hasNext()){
+
+				//QuerySolution -- A single answer from a SELECT query.
+				//results.nextSolution() -- Moves to the next result
+				soln = results.nextSolution();
+
+			}		 
+		}
+		finally {
+			qexec.close();
+		}
+		
+		return soln;
+    }
+	
+	/* this method evaluate given query against given model (local RDF tripleStore) and outputs the one(!) found solution */ 
 	public static QuerySolution evaluationOfSPARQLQueryAgainstModel (String queryString, Model model) {
 		
 		// that will be our result

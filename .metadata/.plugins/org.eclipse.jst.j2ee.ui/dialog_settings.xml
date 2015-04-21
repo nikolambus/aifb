@@ -11,6 +11,5 @@
 		<item value="C:\xampp\tomcat\webapps\SWRLReasoner.war"/>
 		<item value="C:\xampp\tomcat\webapps\SemFormToRule.war"/>
 		<item value="C:\xampp\tomcat\webapps\SemFormToABoxes.war"/>
-		<item value="C:\xampp\tomcat\webapps\PhaseRecognizer.war"/>
 	</list>
 </section>

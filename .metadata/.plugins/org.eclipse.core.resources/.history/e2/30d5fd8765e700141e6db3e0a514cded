@@ -1,0 +1,23 @@
+ static ResultSet genericQuery(String qu, String service) throws 
+Exception {
+         Query query = QueryFactory.create(qu);
+
+         QueryExecution qe = 
+QueryExecutionFactory.sparqlService(service, query);
+         com.hp.hpl.jena.query.ResultSet results =  qe.execSelect();
+
+         qe.close();
+         return results;
+    }
+
+public List<String> getAlgoLocation() throws Exception {
+         ResultSet algos = InfoGatherer.genericQuery(algoLocationQuery, 
+sfbEndpoint);
+         List<String> res = new ArrayList<String>();
+         while (algos.hasNext()) {
+             QuerySolution row = algos.next();
+             RDFNode thing = row.get("y");
+             res.add(thing.toString());
+         }
+         return res;
+     }

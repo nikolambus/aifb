@@ -40,7 +40,7 @@ public class N3_RDF_Mapper7 {
 	 * 				corresponds to the tomcat directory with appropriate cognitive app (e.g.: D:\DiplArbeit\OurWork\Eclipse_workSPACE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\N3toSWRL\files\output/bla.owl)
 	 * 				is reachable via appropriate URI (http://aifb-ls3-vm2.aifb.kit.edu:8080/N3toSWRL/files/output/bla.owl)
 	 */
-	public void action(String ruleN3file, String ruleName, String outputPath) throws IOException {
+	public void action(String ruleN3file, String ruleName, String outputPath) throws Exception {
 				
 		// here we gonna store all rules mapped to RDF from this file
 		String allRulesRDF = "";

@@ -1,0 +1,15 @@
+127.0.0.1 - - [21/Apr/2015:09:29:58 +0200] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [21/Apr/2015:09:53:17 +0200] "POST /N3toSWRL/mapping/input HTTP/1.1" 500 4999
+127.0.0.1 - - [21/Apr/2015:09:54:30 +0200] "GET /N3toSWRL/files/input/rule_SF.n3 HTTP/1.1" 200 3980
+0:0:0:0:0:0:0:1 - - [21/Apr/2015:09:54:30 +0200] "POST /N3toSWRL/mapping/input HTTP/1.1" 500 7139
+127.0.0.1 - - [21/Apr/2015:10:54:44 +0200] "GET /N3toSWRL/files/input/rule_SF.n3 HTTP/1.1" 200 3980
+0:0:0:0:0:0:0:1 - - [21/Apr/2015:10:54:44 +0200] "POST /N3toSWRL/mapping/input HTTP/1.1" 500 3259
+127.0.0.1 - - [21/Apr/2015:11:10:52 +0200] "GET /N3toSWRL/files/input/rule_SF.n3 HTTP/1.1" 200 3980
+0:0:0:0:0:0:0:1 - - [21/Apr/2015:11:10:53 +0200] "POST /N3toSWRL/mapping/input HTTP/1.1" 500 3259
+127.0.0.1 - - [21/Apr/2015:11:29:46 +0200] "GET /N3toSWRL/files/input/rule_SF.n3 HTTP/1.1" 200 3980
+0:0:0:0:0:0:0:1 - - [21/Apr/2015:11:29:49 +0200] "POST /N3toSWRL/mapping/input HTTP/1.1" 204 -
+127.0.0.1 - - [21/Apr/2015:11:32:20 +0200] "GET /N3toSWRL/files/input/rule_SF.n3 HTTP/1.1" 200 3980
+0:0:0:0:0:0:0:1 - - [21/Apr/2015:11:32:23 +0200] "POST /N3toSWRL/mapping/input HTTP/1.1" 204 -
+127.0.0.1 - - [21/Apr/2015:12:13:10 +0200] "GET / HTTP/1.1" 404 951
+127.0.0.1 - - [21/Apr/2015:12:13:49 +0200] "GET /N3toSWRL/files/input/rule_SF.n3 HTTP/1.1" 200 3980
+0:0:0:0:0:0:0:1 - - [21/Apr/2015:12:13:52 +0200] "POST /N3toSWRL/mapping/input HTTP/1.1" 204 -

@@ -142,24 +142,26 @@ public class ReasonerService {
 				// this part describes the immediate reasoning for Windows  
 				//--------------------------------------------------------------------------------------
 
-				/*
+				
 			
 				// we'll need the runtime environment to execute cwm commands
 				Runtime rt = Runtime.getRuntime();
 				
 				// forming the appropriate cwm reasoning command for Windows Command line interpreter (cmd)
-				 String cmd = "cmd /C cwm.py " + patientFile + " --think=" + ruleFile + " --n3=qd/ --purge > " + outputPath + patientName + "_new.ttl";
-				 System.out.println("reasoning command: " + cmd); 
+				String cmd = "cmd /C cwm.py " + patientFile + " --think=" + ruleFile + " --n3=qd/ --purge > " + outputPath + patientName + "_new.ttl";
+				System.out.println("reasoning command: " + cmd); 
 				
 				//execute it
 				Process proc = rt.exec(cmd);		
 				
-				*/
+				
 				
 				//--------------------------------------------------------------------------------------
 				// this part describes the immediate reasoning for Linux 
 				//--------------------------------------------------------------------------------------
 			
+				/*
+				 
 				//!!!
 				//specify here the path to the cwm reasoner
 				String cwmPath = "/home/niko/Schreibtisch/cwm-1.2.1/cwm";
@@ -186,6 +188,8 @@ public class ReasonerService {
 		        //Abnormal termination: Log command parameters and output and throw ExecutionException
 		        System.err.println(commands);
 		        System.exit(1);
+				
+		        */
 				
 				//--------------------------------------------------------------------------------------
 				

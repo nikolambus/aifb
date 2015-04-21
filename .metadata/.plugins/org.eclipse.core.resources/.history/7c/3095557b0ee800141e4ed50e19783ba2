@@ -1,0 +1,38 @@
+package MappingN3toSWRL;
+
+import java.util.List;
+
+import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.query.QueryExecution;
+import com.hp.hpl.jena.query.QueryExecutionFactory;
+import com.hp.hpl.jena.query.QueryFactory;
+import com.hp.hpl.jena.query.ResultSet;
+
+public class QueryOnTripleStoreEndpoint {
+
+String qu = "PREFIX surgiProp: <http://surgipedia.sfb125.de/wiki/Special:URIResolver/Property-3A>" + "\n" +
+	        "SELECT * WHERE {surgiProp:HasFactor <http://semantic-mediawiki.org/swivt/1.0#type> ?z .}";
+
+String service = "http://wissensbasis.sfb125.de/";
+
+public static ResultSet genericQuery(String qu, String service) throws Exception {
+         
+		Query query = QueryFactory.create(qu);
+
+         QueryExecution qe = QueryExecutionFactory.sparqlService(service, query);
+         com.hp.hpl.jena.query.ResultSet results =  qe.execSelect();
+         qe.close();
+         return results;
+}
+
+public List<String> getAlgoLocation() throws Exception {
+         ResultSet algos = InfoGatherer.genericQuery(algoLocationQuery, sfbEndpoint);
+         List<String> res = new ArrayList<String>();
+         while (algos.hasNext()) {
+             QuerySolution row = algos.next();
+             RDFNode thing = row.get("y");
+             res.add(thing.toString());
+         }
+         return res;
+     }
+}

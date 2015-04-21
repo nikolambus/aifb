@@ -25,10 +25,16 @@
 <fullyQualifiedTypeName name="org.apache.http.client.methods.HttpPost"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.apache.http.message.BasicNameValuePair"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.apache.http.client.entity.UrlEncodedFormEntity"/>
 <fullyQualifiedTypeName name="org.apache.http.HttpResponse"/>
 <fullyQualifiedTypeName name="org.apache.http.HttpEntity"/>
 <fullyQualifiedTypeName name="java.io.StringWriter"/>
 <fullyQualifiedTypeName name="org.apache.commons.io.IOUtils"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.query.QueryFactory"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.graph.query.Query"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.query.QueryExecutionFactory"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.query.ResultSet"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.query.Query"/>
+<fullyQualifiedTypeName name="com.hp.hpl.jena.query.QueryExecution"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

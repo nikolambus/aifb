@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="instream" key="selection"/>
+		<item value="POST" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="instream"/>
-			<item value="stuff"/>
-			<item value="mtch"/>
-			<item value="m"/>
-			<item value="Scann"/>
-			<item value="ins.cl"/>
-			<item value="Scanner"/>
-			<item value="S"/>
+			<item value="POST"/>
+			<item value="&#x09;&#x09;&#x09;&#x09;&#x09;&#x09;//if the type of the has not been found - handle it as a datatype property"/>
+			<item value="http://wissensbasis.sfb125.de/"/>
+			<item value="wissensbasis.sfb125.de/"/>
+			<item value="wpg"/>
+			<item value="w"/>
+			<item value="swiv"/>
+			<item value="swiw"/>
 		</list>
 		<list key="replacehistory">
 			<item value="http://aifb-ls3-vm2.aifb.kit.edu:8080/"/>
